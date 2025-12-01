@@ -1,0 +1,141 @@
+/* REMOVER A BORDA BRANCA DO SITE */
+html,
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.fonte {
+  font-family: "Poppins";
+  font-size: 12px;
+}
+.criarconta {
+  width: 105px; /* tamanho do quadro */
+  height: 44px;
+  color: #ffffff;
+  background: #ff914d; /* cor de fundo */
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.loginconta {
+  width: 105px; /* tamanho do quadro */
+  height: 44px;
+  border: 0.5px solid #ff914d;
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.nossocontato {
+  width: 94px; /* tamanho do quadro */
+  height: 44px;
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.sobrenos {
+  width: 85px; /* tamanho do quadro */
+  height: 44px;
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.agenda {
+  width: 140px; /* tamanho do quadro */
+  height: 44px;
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.headerlado {
+  background-color: #1fb6ac;
+  margin: 0;
+  display: flex; /* coloca os quadros lado a lado */
+  justify-content: center;
+}
+
+.headercanto {
+  background-color: #1fb6ac;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à esquerda, botões à direita */
+  padding: 10px;
+}
+
+.botoes {
+  display: flex;
+  gap: 30px; /* mantém o espaçamento original dos botões */
+}
+
+.inciolanding {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* mantém o espaçamento original dos botões */
+}
+
+.vamoscomecar {
+  width: 220px; /* tamanho do quadro */
+  height: 55px;
+  color: #ffffff;
+  background: #ff914d; /* cor de fundo */
+  border-radius: 10px; /* bordas arredondadas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.backgroundinicio {
+  background-color: #1fb6ac;
+  height: 384px;
+}
+.classcaradosite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex; /* deixa as divs lado a lado */
+  justify-content: space-between; /* espaço entre elas */
+  align-items: flex-start; /* alinhamento vertical no topo */
+  width: 80%; /* largura da seção */
+  max-width: 1200px; /* limite máximo */
+  margin: auto; /* centraliza e dá espaçamento de cima */
+}
+
+.barra-branca {
+  display: flex;
+  background-color: #fff8f0;
+  padding: 50px 0; /* tamanho da barra e deixa suave */
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.alinharimagemtext {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px; /* tamanho do quadro */
+  height: 0px;
+}
