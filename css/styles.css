@@ -6,75 +6,96 @@ body {
   padding: 0;
 }
 
+/* ======= PADRÃO GLOBAL PARA TODOS OS BOTÕES ======= */
+.btn {
+  font-size: 14px; /* define o tamanho igual para todos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Poppins";
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  transition: 0.25s ease;
+  user-select: none; /* impede seleção do texto */
+}
+
+/* Hover padrão */
+.btn:hover {
+  filter: brightness(1.05);
+  scale: 1.03;
+}
+
+/* ESTILOS ESPECÍFICOS DE CADA BOTÃO */
+.agenda {
+  white-space: nowrap; /* evita quebra de linha */
+  font-family: "Poppins";
+  width: 140px;
+  height: 44px;
+  background: #ffffff00; /* sem cor fixa, pois é menu */
+  color: #000000;
+}
+
+.sobrenos,
+.nossocontato {
+  white-space: nowrap; /* evita quebra de linha */
+  font-family: "Poppins";
+  width: 100px;
+  height: 44px;
+  color: #000000;
+}
+
+.loginconta {
+  font-family: "Poppins";
+  width: 105px;
+  height: 44px;
+  color: #000000;
+  border: 2px solid #ff914d;
+  background: transparent;
+}
+
+.criarconta {
+  font-family: "Poppins";
+  width: 105px;
+  height: 44px;
+  background: #ff914d;
+  color: #ffffff;
+}
+
+.vamoscomecar {
+  font-family: "Poppins";
+  width: 220px;
+  height: 55px;
+  background: #ff914d;
+  color: #ffffff;
+}
+
 .fonte {
   font-family: "Poppins";
   font-size: 12px;
 }
-.criarconta {
-  width: 105px; /* tamanho do quadro */
-  height: 44px;
-  color: #ffffff;
-  background: #ff914d; /* cor de fundo */
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-.loginconta {
-  width: 105px; /* tamanho do quadro */
-  height: 44px;
-  border: 0.5px solid #ff914d;
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-.nossocontato {
-  width: 94px; /* tamanho do quadro */
-  height: 44px;
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-.sobrenos {
-  width: 85px; /* tamanho do quadro */
-  height: 44px;
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
 
-.agenda {
-  width: 140px; /* tamanho do quadro */
-  height: 44px;
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
 /* opcoes pro funcionamento das opcoes de agendamento */
 .menu-agenda {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-top: 0px;
-  right: 490px; /* ajuste conforme o seu layout */
-  font-size: 12px;
+  right: 510px; /* ajuste conforme o seu layout */
+  font-size: 14px;
 }
 
 .menu-agenda .opcao {
-  padding: 12px 20px;
+  padding: 10px 20px;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none; /* remove sublinhado */
+  color: #000000;
 }
 
 .menu-agenda .opcao:hover {
@@ -109,18 +130,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 10px; /* mantém o espaçamento original dos botões */
-}
-
-.vamoscomecar {
-  width: 220px; /* tamanho do quadro */
-  height: 55px;
-  color: #ffffff;
-  background: #ff914d; /* cor de fundo */
-  border-radius: 10px; /* bordas arredondadas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
 }
 
 .backgroundinicio {
