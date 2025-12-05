@@ -59,6 +59,28 @@ body {
   justify-content: center;
   font-weight: bold;
 }
+/* opcoes pro funcionamento das opcoes de agendamento */
+.menu-agenda {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 0px;
+  right: 490px; /* ajuste conforme o seu layout */
+  font-size: 12px;
+}
+
+.menu-agenda .opcao {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.menu-agenda .opcao:hover {
+  background: #f8c7a9;
+  border-radius: 8px;
+}
 
 .headerlado {
   background-color: #1fb6ac;
