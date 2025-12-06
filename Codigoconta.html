@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrocaSenha</title>
+    
+    <link href="Login.css" rel="stylesheet"> 
+</head>
+<body>
+    
+<body class="fonte">
+    <header>
+      <section class="headercanto">
+        <div>
+          <a href="#">
+            <img src="img/logo.png" alt="Banner do site" width="45" />
+          </a>
+        </div>
+        <section class="botoes">
+          <!--=============botão hamburger (começa escondido)===============-->
+          <button class="menu">
+            <img src="img/menu.png" alt="menu de responsividade" width="25" />
+          </button>
+          <div>
+            <button class="agenda btn">Agende uma Consulta</button>
+            <div class="menu-agenda">
+              <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+            </div>
+          </div>
+
+          <a href="#quemsomos.html" class="sobrenos btn">Sobre Nós</a>
+          <a href="#nossocontato.html" class="nossocontato btn"
+            >Nosso Contato</a
+          >
+          <a href="#login.html" class="loginconta btn">Login</a>
+          <a href="#criarconta.html" class="criarconta btn">Criar conta</a>
+        </section>
+      </section>
+      <!--===================================menu que vai abrir ao clicar no hamburger===================================-->
+      <div class="menu-hamburger">
+        <div class="agenda-mobile">
+          <a class="agenda btn">Agende uma Consulta</a>
+          <div class="menu-agenda-mobile">
+            <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
+            <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+          </div>
+        </div>
+        <a class="sobrenos btn">Sobre Nós</a>
+        <a class="nossocontato btn">Nosso Contato</a>
+        <a class="loginconta btn">Login</a>
+        <a class="criarconta btn">Criar conta</a>
+      </div>
+    </header>
+
+    <script src="js/script.js"></script>
+
+
+    <div id="fundo-esquerda"></div>
+    <div id="fundo-direita"></div>
+
+    <div class="site-conteudo">
+        <div class="caixa">
+            <h4>Verifique seu email</h4>
+            <h7>Insira seu codigo único</h7>
+            <div class="form-floating">
+                <input type="text" class="imput-pin" id="floatingInput">
+                <label for="floatingInput"></label>
+            </div>
+            
+            <div>
+                <button type="button" class="BotaoLogar"><strong>Proximo</strong></button>
+            
+                <hr class="linha-curta">
+                
+                <button type="button" class="BotaoRegistrar">Voltar</button>
+            </div>
+        </div>
+    </div> 
+    
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-grid footer-items-aligned">
+                
+                <div class="footer-col footer-col-start">
+                    <img src="file:///home/murilo/Downloads/image-removebg-preview.png" alt="logo" class="logorodape">
+                </div>
+                
+                <div class="footer-col footer-col-start">
+                    <h4><strong>Links Rapidos</strong></h4>
+                    <ul class="lista-sem-estilo">
+                        <li>serviços</li>
+                        <li>Sobre nós</li>
+                        <li>Redes Sociais</li>
+                        <li>Direitos e Diretrizes</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col footer-col-start">
+                    <ul class="lista-sem-estilo">
+                        <h4><strong>Endereço</strong></h4>
+                        <li>Rua 2 de Julho</li>
+                        <li>Copixaba, Xique Xique</li>
+                        <li>47400-000</li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="footer-grid footer-copyright-row">
+                <div class="footer-col copyright-margin"> 
+                    <p>&copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
