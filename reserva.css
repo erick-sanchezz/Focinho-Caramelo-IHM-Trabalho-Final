@@ -1,0 +1,17 @@
+/* ajusta barra */
+.headercanto {
+  background-color: #1fb6ac;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo à esquerda, botões à direita */
+  padding: 10px;
+  /* --- Novas propriedades para fixar o topo --- */
+  position: fixed; /* Fixa a barra na tela */
+  top: 0; /* Cola no topo */
+  left: 0; /* Cola na esquerda */
+  width: 100%; /* Garante que ocupe a largura toda */
+  z-index: 1000; /* Garante que fique acima dos outros elementos */
+  box-sizing: border-box; /* Garante que o padding não estoure a largura */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* (Opcional) Sombra suave para destacar */
+}

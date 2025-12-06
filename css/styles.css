@@ -4,6 +4,7 @@ body {
   background-color: black;
   margin: 0;
   padding: 0;
+  padding-top: 35px; /* Adicione isso para o conteúdo não ficar escondido atrás do menu */
 }
 
 /* ======= PADRÃO GLOBAL PARA TODOS OS BOTÕES ======= */
@@ -77,6 +78,18 @@ body {
   font-size: 12px;
 }
 
+.menu {
+  white-space: nowrap; /* evita quebra de linha */
+  font-family: "Poppins";
+  width: 50px;
+  height: 44px;
+  background: #ffffff00; /* sem cor fixa, pois é menu */
+  color: #000000;
+  border: none; /* Remove a borda preta/cinza */
+  cursor: pointer; /* Faz aparecer a mãozinha do mouse */
+  padding: 0; /* Remove espaçamento interno padrão do botão */
+}
+
 /* opcoes pro funcionamento das opcoes de agendamento */
 .menu-agenda {
   display: flex;
@@ -86,7 +99,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-top: 0px;
-  right: 510px; /* ajuste conforme o seu layout */
+  right: 506px; /* ajuste conforme o seu layout */
   font-size: 14px;
 }
 
@@ -117,6 +130,13 @@ body {
   align-items: center;
   justify-content: space-between; /* logo à esquerda, botões à direita */
   padding: 10px;
+  /* --- Novas propriedades para fixar o topo --- */
+  position: fixed; /* Fixa a barra na tela */
+  top: 0; /* Cola no topo */
+  left: 0; /* Cola na esquerda */
+  width: 100%; /* Garante que ocupe a largura toda */
+  z-index: 1000; /* Garante que fique acima dos outros elementos */
+  box-sizing: border-box; /* Garante que o padding não estoure a largura */
 }
 
 .botoes {
@@ -169,4 +189,92 @@ body {
   justify-content: space-between;
   width: 160px; /* tamanho do quadro */
   height: 0px;
+}
+
+/* --- FAIXA DIVISÓRIA (A barra teal abaixo dos pets) --- */
+.faixa-divisoria {
+  background-color: #1fb6ac; /* Mesma cor do header */
+  height: 50px; /* Ajuste a altura conforme preferir */
+  width: 100%;
+}
+
+/* --- SEÇÃO GERAL DE SERVIÇOS --- */
+.secao-servicos {
+  background-color: #fff8f0; /* Fundo creme igual à barra branca anterior */
+  padding: 60px 0 100px 0; /* Espaçamento interno */
+  font-family: "Poppins", sans-serif;
+}
+
+.container-servicos {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- TEXTOS E TÍTULOS --- */
+.cabecalho-servicos {
+  margin-bottom: 50px;
+}
+
+.subtitulo-teal {
+  color: #1fb6ac;
+  font-size: 14px;
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.titulo-principal {
+  font-size: 32px;
+  color: #000;
+  font-weight: 700;
+  max-width: 600px; /* Limita a largura para quebrar a linha igual na foto */
+  line-height: 1.2;
+}
+
+/* --- GRID DOS CARDS --- */
+.cards-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Espaço entre os cards */
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+/* --- ESTILO DO CARTÃO (CARD) --- */
+.card {
+  background-color: #ffffff;
+  border-radius: 30px; /* Borda bem arredondada */
+  padding: 40px 30px;
+  flex: 1; /* Faz os 3 terem o mesmo tamanho */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); /* Sombra super leve opcional */
+}
+
+.card h4 {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #000;
+}
+
+.card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- QUADRADO DO ÍCONE --- */
+.icone-box {
+  background-color: #1fb6ac;
+  width: 160px;
+  height: 120px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }

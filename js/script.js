@@ -1,18 +1,22 @@
 const botaoAgenda = document.querySelector(".agenda");
 const menuAgenda = document.querySelector(".menu-agenda");
 
-// Alternar o menu quando clicar no botão
-botaoAgenda.addEventListener("click", () => {
-  if (menuAgenda.style.display === "none" || menuAgenda.style.display === "") {
-    menuAgenda.style.display = "block";
+// Esconde o menu assim que a página carrega
+menuAgenda.style.display = "none";
+
+// Alterna o menu ao clicar no botão
+botaoAgenda.addEventListener("click", (e) => {
+  e.stopPropagation(); // evita que o clique feche o menu imediatamente
+  if (menuAgenda.style.display === "none") {
+    menuAgenda.style.display = "flex"; // mantém a direção de coluna
+    menuAgenda.style.flexDirection = "column";
   } else {
     menuAgenda.style.display = "none";
   }
 });
 
-// Fechar menu ao clicar fora
+// Fecha o menu ao clicar fora
 document.addEventListener("click", (event) => {
-  // Se o clique NÃO for dentro do menu e NÃO no botão → fecha
   if (
     !menuAgenda.contains(event.target) &&
     !botaoAgenda.contains(event.target)
