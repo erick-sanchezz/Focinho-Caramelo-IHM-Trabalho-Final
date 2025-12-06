@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login - Focinho Caramelo</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -11,45 +19,63 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-
-    <link href="css/Login.css" rel="stylesheet" />
+    <link href="../css/petshop.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/Login.css" rel="stylesheet" />
   </head>
-  <body>
-    <section class="headercanto">
-      <div>
-        <img
-          src="/home/murilo/html/trabalhoSite/logopetshop (1).png"
-          alt="Banner do site"
-          width="45"
-        />
+  <body class="fonte">
+    <header>
+      <section class="headercanto">
+        <div>
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Banner do site" width="45" />
+          </a>
+        </div>
+        <section class="botoes">
+          <!--=============botão hamburger (começa escondido)===============-->
+          <button class="menu">
+            <img
+              src="../img/menu.png"
+              alt="menu de responsividade"
+              width="25"
+            />
+          </button>
+          <div>
+            <button class="agenda btn">Agende uma Consulta</button>
+            <div class="menu-agenda">
+              <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+            </div>
+          </div>
+
+          <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+          <a href="Nossocontato" class="nossocontato btn">Nosso Contato</a>
+          <a href="Login.html" class="loginconta btn">Login</a>
+          <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
+        </section>
+      </section>
+      <!--===================================menu que vai abrir ao clicar no hamburger===================================-->
+      <div class="menu-hamburger">
+        <div class="agenda-mobile">
+          <a class="agenda btn">Agende uma Consulta</a>
+          <div class="menu-agenda-mobile">
+            <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
+            <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+          </div>
+        </div>
+        <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+        <a href="Nossocontato" class="nossocontato btn">Nosso Contato</a>
+        <a href="Login.html" class="loginconta btn">Login</a>
+        <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
       </div>
-      <div class="botoes">
-        <div class="agenda">
-          <a href="#" class="agenda">Agende uma Consulta</a>
-        </div>
-        <div class="sobrenos"><a href="#" class="sobrenos">Sobre Nós</a></div>
-        <div class="nossocontato">
-          <a href="#" class="nossocontato">Nosso Contato</a>
-        </div>
-        <div class="loginconta">
-          <a href="/home/murilo/html/trabalhoSite/login.html" class="loginconta"
-            >Login</a
-          >
-        </div>
-        <div class="criarconta">
-          <a
-            href="/home/murilo/html/trabalhoSite/cadastrar.html"
-            class="loginconta"
-            >Criar Conta</a
-          >
-        </div>
-      </div>
-    </section>
-    <div id="fundo-esquerda"></div>
-    <div id="fundo-direita"></div>
+    </header>
+
+    <script src="../js/script.js"></script>
+
     <div class="site-conteudo">
       <div class="caixa">
         <h4>Acesse sua conta</h4>
+
         <div class="form-floating">
           <input
             type="email"
@@ -59,6 +85,7 @@
           />
           <label for="floatingInput">Email</label>
         </div>
+
         <div class="form-floating">
           <input
             type="password"
@@ -68,6 +95,7 @@
           />
           <label for="floatingPassword">Senha</label>
         </div>
+
         <div class="form-check text-start my-3">
           <input
             class="form-check-input"
@@ -79,30 +107,34 @@
             >Lembre-se de mim</label
           >
         </div>
+
         <div>
-          <button type="button" class="BotaoLogar">
-            <strong>Login</strong>
-          </button>
+          <button type="button" class="BotaoLogar">Login</button>
         </div>
-        <a href="#">esquecei minha senha</a>
-        <hr class="my-4 w-100 mx-auto" />
+
+        <div class="mt-3">
+          <a href="#" style="font-size: 14px; color: #555"
+            >Esqueci minha senha</a
+          >
+        </div>
+
+        <hr class="my-4" />
+
         <div>
-          <h4>Não tem uma conta?</h4>
-          <button type="button" class="BotaoRegistrar">Cadastrar</button>
+          <h6 style="margin-bottom: 15px">Não tem uma conta?</h6>
+          <a href="cadastrar.html">
+            <button type="button" class="BotaoRegistrar">Cadastrar</button>
+          </a>
         </div>
       </div>
     </div>
+
     <footer>
       <div class="rodape-container">
         <div class="rodape-principal">
           <div class="rodape-colunalogo">
-            <img
-              src="file:///home/murilo/Downloads/image-removebg-preview.png"
-              alt="logo"
-              class="logorodape"
-            />
+            <img src="../img/logo.png" class="logorodape" width="200" />
           </div>
-
           <div class="rodape-coluna links">
             <h4><strong>Links Rápidos</strong></h4>
             <ul class="list-unstyled">
@@ -112,7 +144,6 @@
               <li>Direitos e Diretrizes</li>
             </ul>
           </div>
-
           <div class="rodape-coluna endereco">
             <h4><strong>Endereço</strong></h4>
             <ul class="list-unstyled">
@@ -122,7 +153,6 @@
             </ul>
           </div>
         </div>
-
         <div class="rodape-copyright">
           <p>
             &copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos
