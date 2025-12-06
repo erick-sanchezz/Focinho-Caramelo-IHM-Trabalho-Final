@@ -1,6 +1,17 @@
-/* ================================================== */
-/* 1. RESET E CONFIGURAÇÃO GLOBAL                    */
-/* ================================================== */
+/* ==========================================================================
+   1. VARIÁVEIS E CORES
+   ========================================================================== */
+:root {
+  --teal: #1fb6ac;
+  --orange: #ff914d;
+  --cream: #fff8f0;
+  --menu-hover: #f8c7a9;
+  --menu-bg: #ffffff;
+}
+
+/* ==========================================================================
+   2. RESET E BASE
+   ========================================================================== */
 html,
 body {
   background-color: black;
@@ -14,20 +25,10 @@ body {
   font-size: 12px;
 }
 
-/* ================================================== */
-/* 2. VARIÁVEIS SIMPLES (cores e manutenção)         */
-/* ================================================== */
-:root {
-  --teal: #1fb6ac;
-  --orange: #ff914d;
-  --cream: #fff8f0;
-  --menu-hover: #f8c7a9;
-  --menu-bg: #ffffff;
-}
-
-/* ================================================== */
-/* 3. BOTÕES - PADRÃO GLOBAL                         */
-/* ================================================== */
+/* ==========================================================================
+   3. COMPONENTES GLOBAIS (Botões e Elementos Repetidos)
+   ========================================================================== */
+/* --- Padrão Global de Botões --- */
 .btn {
   font-size: 14px;
   display: flex;
@@ -47,9 +48,7 @@ body {
   transform: scale(1.03);
 }
 
-/* ================================================== */
-/* 4. BOTÕES ESPECÍFICOS                              */
-/* ================================================== */
+/* --- Variações de Botões --- */
 .agenda {
   font-family: "Poppins";
   width: 140px;
@@ -98,9 +97,30 @@ body {
   border-radius: 10px;
 }
 
-/* ================================================== */
-/* 5. HEADER / NAVBAR                                 */
-/* ================================================== */
+.btn-mostrar-mais-reviews {
+  background-color: var(--orange);
+  color: #fff;
+  width: 180px;
+  height: 45px;
+  font-size: 16px;
+}
+
+/* --- Elementos Divisórios --- */
+.faixa-branca {
+  background-color: var(--cream);
+  height: 50px;
+  width: 100%;
+}
+
+.faixa-divisoria {
+  background-color: var(--teal);
+  height: 50px;
+  width: 100%;
+}
+
+/* ==========================================================================
+   4. HEADER E MENU DE NAVEGAÇÃO
+   ========================================================================== */
 .headercanto {
   background-color: var(--teal);
   display: flex;
@@ -125,7 +145,7 @@ body {
   position: relative; /* referência para .menu-agenda */
 }
 
-/* Botão hamburger */
+/* --- Menu Hamburger (Mobile) --- */
 .menu {
   display: none; /* só aparece no mobile via media query */
   position: fixed;
@@ -139,38 +159,6 @@ body {
   cursor: pointer;
 }
 
-/* ================================================== */
-/* 6. DROPDOWN - MENU AGENDAMENTO                     */
-/* ================================================== */
-.menu-agenda {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: var(--menu-bg);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  overflow: hidden;
-  z-index: 1010;
-}
-
-.menu-agenda .opcao {
-  display: block;
-  padding: 10px 14px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #000;
-  white-space: nowrap;
-}
-
-.menu-agenda .opcao:hover {
-  background: var(--menu-hover);
-}
-
-/* ================================================== */
-/* 7. MENU HAMBURGER (mobile)                         */
-/* ================================================== */
 .menu-hamburger {
   display: none;
   position: fixed;
@@ -196,9 +184,19 @@ body {
   background-color: var(--menu-hover);
 }
 
-/* ================================================== */
-/* 8. hambuguer / agendar opcoes mobile               */
-/* ================================================== */
+/* --- Dropdown Agenda (Desktop e Mobile) --- */
+.menu-agenda {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1010;
+}
 
 .menu-agenda-mobile {
   display: none;
@@ -211,20 +209,24 @@ body {
   gap: 0;
 }
 
+.menu-agenda .opcao,
 .menu-agenda-mobile .opcao {
+  display: block;
   padding: 10px 14px;
-  color: #000;
   font-weight: 700;
   text-decoration: none;
+  color: #000;
+  white-space: nowrap;
 }
 
+.menu-agenda .opcao:hover,
 .menu-agenda-mobile .opcao:hover {
-  background-color: var(--menu-hover);
+  background: var(--menu-hover);
 }
 
-/* ================================================== */
-/* 8. HERO / PRIMEIRA DOBRA                             */
-/* ================================================== */
+/* ==========================================================================
+   5. SEÇÃO: HERO (INÍCIO)
+   ========================================================================== */
 .backgroundinicio {
   background-color: var(--teal);
   height: 384px;
@@ -252,9 +254,9 @@ body {
   justify-content: center;
 }
 
-/* ================================================== */
-/* 9. BARRA DE BENEFÍCIOS                               */
-/* ================================================== */
+/* ==========================================================================
+   6. SEÇÃO: BARRA DE BENEFÍCIOS
+   ========================================================================== */
 .barra-branca {
   display: flex;
   background-color: var(--cream);
@@ -274,24 +276,9 @@ body {
   height: 0px;
 }
 
-/* ================================================== */
-/* 10. FAIXAS DIVISÓRIAS                                */
-/* ================================================== */
-.faixa-branca {
-  background-color: var(--cream);
-  height: 50px;
-  width: 100%;
-}
-
-.faixa-divisoria {
-  background-color: var(--teal);
-  height: 50px;
-  width: 100%;
-}
-
-/* ================================================== */
-/* 11. SEÇÃO SERVIÇOS (CARDS)                            */
-/* ================================================== */
+/* ==========================================================================
+   7. SEÇÃO: SERVIÇOS
+   ========================================================================== */
 .secao-servicos {
   background-color: var(--cream);
   padding: 60px 0 100px 0;
@@ -325,7 +312,7 @@ body {
   line-height: 1.2;
 }
 
-/* CARDS GRID */
+/* --- Cards Grid --- */
 .cards-grid {
   display: flex;
   justify-content: space-between;
@@ -363,7 +350,6 @@ body {
   line-height: 1.6;
 }
 
-/* ÍCONE BOX */
 .icone-box {
   background-color: var(--teal);
   width: 160px;
@@ -375,9 +361,9 @@ body {
   margin-bottom: 10px;
 }
 
-/* ================================================== */
-/* 12. SEÇÃO GALERIA                                   */
-/* ================================================== */
+/* ==========================================================================
+   8. SEÇÃO: GALERIA
+   ========================================================================== */
 .secao-galeria {
   background-color: var(--teal);
   padding: 50px 0 80px 0;
@@ -426,9 +412,314 @@ body {
   transform: scale(1.05);
 }
 
-/* ================================================== */
-/* 13. RESPONSIVIDADE (TABLET & MOBILE)               */
-/* ================================================== */
+/* ==========================================================================
+   9. SEÇÃO: SOBRE NÓS
+   ========================================================================== */
+.secao-sobre {
+  background-color: var(--cream);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.container-sobre {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.sobre-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.sobre-img-wrapper img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.z-index-top {
+  z-index: 2;
+  position: relative;
+}
+
+/* Bloco 1 */
+.titulo-sobre-dark {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.teal-box-rounded {
+  background-color: var(--teal);
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+.img-shape-1 img {
+  border-radius: 100px 100px 100px 0;
+}
+
+/* Blocos 2 e 3 (Geometria e Sobreposição) */
+.img-rounded img {
+  border-radius: 30px;
+}
+
+.overlap-block-right .sobre-img-wrapper {
+  margin-right: -80px;
+}
+
+.teal-shape-trapezoid-right {
+  background-color: var(--teal);
+  color: #fff;
+  padding: 50px 40px 50px 100px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  clip-path: polygon(10% 0%, 100% 10%, 100% 90%, 10% 100%);
+  border-radius: 0 30px 30px 0;
+}
+
+.overlap-block-left .sobre-img-wrapper {
+  margin-left: -80px;
+}
+
+.teal-shape-trapezoid-left {
+  background-color: var(--teal);
+  color: #fff;
+  padding: 50px 100px 50px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: right;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  clip-path: polygon(0% 10%, 90% 0%, 90% 100%, 0% 90%);
+  border-radius: 30px 0 0 30px;
+}
+
+/* --- Media Query Específica da Seção Sobre (Tablet/Mobile) --- */
+@media (max-width: 900px) {
+  .container-sobre {
+    gap: 60px;
+  }
+  .sobre-block {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .block-reverse-mobile {
+    flex-direction: column-reverse;
+  }
+  .titulo-sobre-dark,
+  .teal-box-rounded {
+    margin: 0 auto;
+  }
+  .titulo-sobre-dark {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .overlap-block-right .sobre-img-wrapper,
+  .overlap-block-left .sobre-img-wrapper {
+    margin: 0;
+  }
+  .teal-shape-trapezoid-right,
+  .teal-shape-trapezoid-left {
+    clip-path: none;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .img-shape-1 img {
+    border-radius: 30px;
+  }
+}
+
+/* ==========================================================================
+   10. SEÇÃO: DEPOIMENTOS
+   ========================================================================== */
+.secao-depoimentos {
+  background-color: var(--cream);
+  padding: 60px 0 100px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-depoimentos {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-depoimentos {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.grid-reviews {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.card-review {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 30px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eee;
+}
+
+.texto-review {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.usuario-review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.usuario-review img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nome-usuario {
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+}
+
+.box-btn-centro {
+  margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   11. SEÇÃO: NEWSLETTER
+   ========================================================================== */
+.area-newsletter {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.area-newsletter h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.area-newsletter p {
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 50px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: 1px solid #777;
+  padding-left: 20px;
+  padding-right: 110px;
+  font-family: "Poppins";
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fff8f0;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.btn-salvar {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  background-color: #e65100;
+  color: white;
+  border-radius: 40px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-salvar:hover {
+  background-color: var(--orange);
+}
+
+/* --- Media Query Específica da Newsletter/Depoimentos --- */
+@media (max-width: 800px) {
+  .grid-reviews {
+    flex-direction: column;
+  }
+  .titulo-depoimentos {
+    font-size: 28px;
+  }
+  .card-review {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .area-newsletter h3 {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================================================
+   12. RESPONSIVIDADE GERAL (LAYOUT & MENU)
+   ========================================================================== */
+
+/* Tablet & Mobile Pequeno */
 @media (max-width: 939px) {
   .container {
     flex-direction: column;
@@ -503,6 +794,7 @@ body {
   }
 }
 
+/* Mobile Menor (Galeria e Ajustes Finos) */
 @media (max-width: 600px) {
   .grid-fotos {
     grid-template-columns: repeat(2, 1fr);
@@ -531,11 +823,6 @@ body {
     font-size: 22px;
   }
 
-  .img-transicao {
-    transform: none;
-    margin-bottom: 20px;
-  }
-
   .barra-branca {
     flex-direction: column;
     padding-top: 20px;
@@ -547,365 +834,11 @@ body {
   }
 }
 
+/* Mobile Mínimo */
 @media (max-width: 400px) {
   .inciolanding img:last-child {
     max-width: 400px;
     width: 90%;
     margin-bottom: -30px;
-  }
-}
-
-/* ================================================== */
-/* SEÇÃO SOBRE NÓS - ESTILOS                          */
-/* ================================================== */
-
-.secao-sobre {
-  background-color: var(--cream); /* Usa a variável de cor creme */
-  padding: 80px 0;
-  overflow: hidden; /* Impede que elementos sobrepostos vazem da tela */
-}
-
-.container-sobre {
-  width: 85%;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 100px; /* Espaço grande entre os 3 blocos principais */
-}
-
-/* Estilo geral para cada linha (bloco) */
-.sobre-block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* Wrappers para as imagens */
-.sobre-img-wrapper img {
-  width: 100%;
-  max-width: 450px; /* Tamanho máximo das fotos */
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* Classe utilitária para colocar a imagem na frente na sobreposição */
-.z-index-top {
-  z-index: 2;
-  position: relative;
-}
-
-/* --- BLOCO 1: ESTILOS ESPECÍFICOS --- */
-
-.titulo-sobre-dark {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 25px;
-  max-width: 500px;
-}
-
-.teal-box-rounded {
-  background-color: var(--teal);
-  color: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 450px;
-}
-
-/* Forma específica da imagem 1 (Arredondada em 3 cantos, reta em 1) */
-.img-shape-1 img {
-  /* Top-left, Top-right, Bottom-right, Bottom-left */
-  border-radius: 100px 100px 100px 0;
-}
-
-/* --- BLOCOS 2 E 3: SOBREPOSIÇÃO E FORMAS GEOMÉTRICAS --- */
-
-.img-rounded img {
-  border-radius: 30px; /* Arredondamento padrão das fotos 2 e 3 */
-}
-
-/* Bloco 2: Imagem esquerda sobrepondo texto direita */
-.overlap-block-right .sobre-img-wrapper {
-  margin-right: -80px; /* Puxa a imagem para cima do texto */
-}
-
-/* A forma teal "torta" apontando para a direita */
-.teal-shape-trapezoid-right {
-  background-color: var(--teal);
-  color: #fff;
-  padding: 50px 40px 50px 100px; /* Padding esquerdo maior para não cobrir o texto com a imagem */
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.4;
-  position: relative;
-  z-index: 1; /* Fica atrás da imagem */
-  flex: 1; /* Ocupa o espaço restante */
-
-  /* O segredo da forma torta: clip-path */
-  /* Cria um polígono: topo-esq(recuado), topo-dir, base-dir, base-esq(recuado) */
-  clip-path: polygon(10% 0%, 100% 10%, 100% 90%, 10% 100%);
-  border-radius: 0 30px 30px 0; /* Arredonda levemente o lado direito */
-}
-
-/* Bloco 3: Texto esquerda sobrepondo imagem direita */
-.overlap-block-left .sobre-img-wrapper {
-  margin-left: -80px; /* Puxa a imagem para cima do texto */
-}
-
-/* A forma teal "torta" apontando para a esquerda (espelho da anterior) */
-.teal-shape-trapezoid-left {
-  background-color: var(--teal);
-  color: #fff;
-  padding: 50px 100px 50px 40px; /* Padding direito maior */
-  font-size: 16px;
-  font-weight: 600;
-  text-align: right; /* Alinha texto à direita para combinar com a forma */
-  line-height: 1.4;
-  position: relative;
-  z-index: 1;
-  flex: 1;
-
-  /* O segredo da forma torta espelhada */
-  clip-path: polygon(0% 10%, 90% 0%, 90% 100%, 0% 90%);
-  border-radius: 30px 0 0 30px; /* Arredonda levemente o lado esquerdo */
-}
-
-/* ================================================== */
-/* RESPONSIVIDADE (ADAPTAÇÃO PARA CELULAR)            */
-/* ================================================== */
-
-@media (max-width: 900px) {
-  .container-sobre {
-    gap: 60px;
-  }
-
-  /* Empilha tudo verticalmente */
-  .sobre-block {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  /* No mobile, inverte a ordem do bloco 1 para a imagem ficar em cima */
-  .block-reverse-mobile {
-    flex-direction: column-reverse;
-  }
-
-  .titulo-sobre-dark,
-  .teal-box-rounded {
-    margin: 0 auto; /* Centraliza */
-  }
-
-  .titulo-sobre-dark {
-    margin-top: 20px;
-    font-size: 20px;
-  }
-
-  /* --- RESET DAS SOBREPOSIÇÕES NO MOBILE --- */
-  /* Remove as margens negativas e formas complexas para ficar limpo no celular */
-
-  .overlap-block-right .sobre-img-wrapper,
-  .overlap-block-left .sobre-img-wrapper {
-    margin: 0; /* Remove sobreposição */
-  }
-
-  /* Transforma os trapézios em caixas arredondadas normais no mobile */
-  .teal-shape-trapezoid-right,
-  .teal-shape-trapezoid-left {
-    clip-path: none; /* Remove a forma torta */
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    width: 100%; /* Ocupa largura total */
-    box-sizing: border-box;
-  }
-
-  /* Ajusta a forma da imagem 1 para ficar mais harmônica no mobile */
-  .img-shape-1 img {
-    border-radius: 30px;
-  }
-}
-
-/* ================================================== */
-/* SEÇÃO DEPOIMENTOS E NEWSLETTER                     */
-/* ================================================== */
-
-.secao-depoimentos {
-  background-color: var(--cream); /* Mantém o fundo creme */
-  padding: 60px 0 100px 0;
-  font-family: "Poppins", sans-serif;
-}
-
-.container-depoimentos {
-  width: 85%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza tudo */
-}
-
-.titulo-depoimentos {
-  font-size: 36px;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-/* --- GRID DOS CARDS DE REVIEW --- */
-.grid-reviews {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  width: 100%;
-  margin-bottom: 40px;
-  flex-wrap: wrap; /* Permite quebrar linha se necessário */
-}
-
-.card-review {
-  background-color: #fff;
-  border-radius: 25px; /* Bordas bem arredondadas */
-  padding: 30px;
-  flex: 1; /* Todos com mesmo tamanho */
-  min-width: 280px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Sombra suave */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Empurra o nome para o final */
-  border: 1px solid #eee;
-}
-
-.texto-review {
-  font-size: 14px;
-  color: #000;
-  line-height: 1.6;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-/* Área do Usuário (Foto + Nome) */
-.usuario-review {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.usuario-review img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Deixa a foto redonda */
-  object-fit: cover;
-}
-
-.nome-usuario {
-  font-weight: 700;
-  color: #000;
-  font-size: 14px;
-}
-
-/* --- BOTÃO MOSTRAR MAIS --- */
-.box-btn-centro {
-  margin-bottom: 80px; /* Espaço até a newsletter */
-}
-
-.btn-mostrar-mais-reviews {
-  background-color: var(--orange);
-  color: #fff;
-  width: 180px;
-  height: 45px;
-  font-size: 16px;
-}
-
-/* ================================================== */
-/* NEWSLETTER ESTILIZADA                              */
-/* ================================================== */
-.area-newsletter {
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-}
-
-.area-newsletter h3 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 5px;
-  color: #000;
-}
-
-.area-newsletter p {
-  color: #888; /* Cinza do texto pequeno */
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-/* O truque do botão dentro do input */
-.input-wrapper {
-  position: relative; /* Permite posicionar o botão absoluto dentro */
-  width: 100%;
-  height: 50px;
-}
-
-.input-wrapper input {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px; /* Borda pílula */
-  border: 1px solid #777; /* Borda cinza escura como na foto */
-  padding-left: 20px;
-  padding-right: 110px; /* Espaço para o botão não cobrir o texto */
-  font-family: "Poppins";
-  font-size: 14px;
-  box-sizing: border-box;
-  background-color: #fff8f0; /* Fundo creme igual ao da section */
-}
-
-.input-wrapper input:focus {
-  outline: none;
-  border-color: var(--orange);
-}
-
-.btn-salvar {
-  position: absolute;
-  top: 5px;
-  bottom: 5px;
-  right: 5px;
-  background-color: #e65100; /* Laranja um pouco mais escuro/avermelhado da foto */
-  color: white;
-  border-radius: 40px;
-  width: 100px;
-  border: none;
-  cursor: pointer;
-  font-weight: 700;
-}
-
-.btn-salvar:hover {
-  background-color: var(--orange);
-}
-
-/* ================================================== */
-/* RESPONSIVIDADE (MOBILE)                            */
-/* ================================================== */
-@media (max-width: 800px) {
-  .grid-reviews {
-    flex-direction: column; /* Empilha os reviews */
-  }
-
-  .titulo-depoimentos {
-    font-size: 28px;
-  }
-
-  .card-review {
-    width: 100%; /* Ocupa largura total */
-    box-sizing: border-box; /* Garante que padding não estoure */
-  }
-
-  .area-newsletter h3 {
-    font-size: 22px;
   }
 }
