@@ -1,207 +1,251 @@
-/* REMOVER A BORDA BRANCA DO SITE */
+/* ================================================== */
+/* RESET E CONFIGURAÇÃO GLOBAL                        */
+/* ================================================== */
 html,
 body {
   background-color: black;
   margin: 0;
   padding: 0;
-  padding-top: 35px; /* Adicione isso para o conteúdo não ficar escondido atrás do menu */
+  padding-top: 35px; /* Evita que o header fixo tampe o conteúdo */
 }
 
-/* ======= PADRÃO GLOBAL PARA TODOS OS BOTÕES ======= */
+.fonte {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+/* ================================================== */
+/* VARIÁVEIS SIMPLES (opcional para manutenção)       */
+/* ================================================== */
+/* -- não obrigatório, só pra referência rápida -- */
+:root {
+  --teal: #1fb6ac;
+  --orange: #ff914d;
+  --cream: #fff8f0;
+  --menu-hover: #f8c7a9;
+  --menu-bg: #ffffff;
+}
+
+/* ================================================== */
+/* BOTÕES - PADRÃO GLOBAL                             */
+/* ================================================== */
+/* Estilo base para todos os botões/links que usam .btn */
 .btn {
-  font-size: 14px; /* define o tamanho igual para todos */
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-family: "Poppins";
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 700; /* garante negrito por padrão */
   text-decoration: none;
   border: none;
   transition: 0.25s ease;
-  user-select: none; /* impede seleção do texto */
+  user-select: none;
 }
 
-/* Hover padrão */
+/* Hover padrão (corrigido: usar transform) */
 .btn:hover {
   filter: brightness(1.05);
-  scale: 1.03;
+  transform: scale(1.03);
 }
 
-/* ESTILOS ESPECÍFICOS DE CADA BOTÃO */
+/* ================================================== */
+/* BOTÕES ESPECÍFICOS                                  */
+/* (Somente propriedades que difere do padrão .btn)   */
+/* ================================================== */
+
+/* Agenda - botão que abre dropdown */
 .agenda {
-  white-space: nowrap; /* evita quebra de linha */
   font-family: "Poppins";
+  font-weight: bold;
   width: 140px;
   height: 44px;
-  background: #ffffff00; /* sem cor fixa, pois é menu */
-  color: #000000;
+  background: transparent; /* sem cor fixa, pois abre um menu */
+  color: #000;
+  white-space: nowrap; /* evita quebra de linha */
+  font-weight: 700; /* reafirmo para evitar perda do bold */
 }
 
+/* Links/itens com largura fixa */
 .sobrenos,
 .nossocontato {
-  white-space: nowrap; /* evita quebra de linha */
-  font-family: "Poppins";
   width: 100px;
   height: 44px;
-  color: #000000;
+  color: #000;
+  white-space: nowrap;
 }
 
 .loginconta {
-  font-family: "Poppins";
   width: 105px;
   height: 44px;
-  color: #000000;
-  border: 2px solid #ff914d;
+  color: #000;
+  border: 2px solid var(--orange);
   background: transparent;
 }
 
 .criarconta {
-  font-family: "Poppins";
   width: 105px;
   height: 44px;
-  background: #ff914d;
-  color: #ffffff;
+  background: var(--orange);
+  color: #fff;
 }
 
 .vamoscomecar {
-  font-family: "Poppins";
   width: 220px;
   height: 55px;
-  background: #ff914d;
-  color: #ffffff;
+  background: var(--orange);
+  color: #fff;
 }
 
-.fonte {
-  font-family: "Poppins";
-  font-size: 12px;
-}
-
+/* menu hamburger (pequeno) */
 .menu {
-  white-space: nowrap; /* evita quebra de linha */
-  font-family: "Poppins";
   width: 50px;
   height: 44px;
-  background: #ffffff00; /* sem cor fixa, pois é menu */
-  color: #000000;
-  border: none; /* Remove a borda preta/cinza */
-  cursor: pointer; /* Faz aparecer a mãozinha do mouse */
-  padding: 0; /* Remove espaçamento interno padrão do botão */
-}
-
-/* opcoes pro funcionamento das opcoes de agendamento */
-.menu-agenda {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  margin-top: 0px;
-  right: 506px; /* ajuste conforme o seu layout */
-  font-size: 14px;
-}
-
-.menu-agenda .opcao {
-  padding: 10px 20px;
+  background: transparent;
+  color: #000;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
-  text-decoration: none; /* remove sublinhado */
-  color: #000000;
+  padding: 0;
+  font-weight: 700;
 }
 
-.menu-agenda .opcao:hover {
-  background: #f8c7a9;
-  border-radius: 8px;
-}
-
-.headerlado {
-  background-color: #1fb6ac;
-  margin: 0;
-  display: flex; /* coloca os quadros lado a lado */
-  justify-content: center;
-}
+/* ================================================== */
+/* HEADER / NAVBAR                                     */
+/* ================================================== */
 
 .headercanto {
-  background-color: #1fb6ac;
+  background-color: var(--teal);
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo à esquerda, botões à direita */
+  justify-content: space-between;
   padding: 10px;
-  /* --- Novas propriedades para fixar o topo --- */
-  position: fixed; /* Fixa a barra na tela */
-  top: 0; /* Cola no topo */
-  left: 0; /* Cola na esquerda */
-  width: 100%; /* Garante que ocupe a largura toda */
-  z-index: 1000; /* Garante que fique acima dos outros elementos */
-  box-sizing: border-box; /* Garante que o padding não estoure a largura */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .botoes {
   display: flex;
-  gap: 30px; /* mantém o espaçamento original dos botões */
+  gap: 30px;
+  align-items: center;
+}
+
+/* Faz o container direto do botão + dropdown ser referência */
+.botoes > div {
+  position: relative; /* referência para .menu-agenda */
+}
+
+/* ================================================== */
+/* DROPDOWN: MENU DE AGENDAMENTO                      */
+/* ================================================== */
+
+/* Começa escondido; o JS troca para display: flex quando abrir */
+.menu-agenda {
+  display: none; /* oculto por padrão */
+  flex-direction: column; /* quando virar flex, fica coluna */
+  position: absolute;
+  top: 100%; /* colado abaixo do botão pai */
+  right: 0; /* alinhado à direita do botão pai */
+  background: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1010;
+  font-size: 14px;
+}
+
+/* Links dentro do dropdown (são <a>) */
+.menu-agenda .opcao {
+  display: block;
+  padding: 10px 14px;
+  font-weight: 700; /* bold nas opções também, se desejar */
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+}
+
+.menu-agenda .opcao:hover {
+  background: var(--menu-hover);
+}
+
+/* ================================================== */
+/* HERO / PRIMEIRA DOBRA                               */
+/* ================================================== */
+
+.backgroundinicio {
+  background-color: var(--teal);
+  height: 384px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .inciolanding {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* mantém o espaçamento original dos botões */
+  gap: 10px;
 }
 
-.backgroundinicio {
-  background-color: #1fb6ac;
-  height: 384px;
-}
-.classcaradosite {
+.box-imagem-pets {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.container {
-  display: flex; /* deixa as divs lado a lado */
-  justify-content: space-between; /* espaço entre elas */
-  align-items: flex-start; /* alinhamento vertical no topo */
-  width: 80%; /* largura da seção */
-  max-width: 1200px; /* limite máximo */
-  margin: auto; /* centraliza e dá espaçamento de cima */
-}
+/* ================================================== */
+/* BARRA DE BENEFÍCIOS (barra creme com ícones)       */
+/* ================================================== */
 
 .barra-branca {
   display: flex;
-  background-color: #fff8f0;
-  padding: 50px 0; /* tamanho da barra e deixa suave */
+  background-color: var(--cream);
+  padding: 50px 0;
   align-items: center;
   justify-content: center;
   gap: 80px;
 }
 
 .alinharimagemtext {
-  font-family: Poppins;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 160px; /* tamanho do quadro */
+  width: 160px;
+  /* mantenho height:0 se você usa assim por layout */
   height: 0px;
 }
 
-/* --- FAIXA DIVISÓRIA (A barra teal abaixo dos pets) --- */
+/* ================================================== */
+/* FAIXA DIVISÓRIA                                     */
+/* ================================================== */
+
 .faixa-divisoria {
-  background-color: #1fb6ac; /* Mesma cor do header */
-  height: 50px; /* Ajuste a altura conforme preferir */
+  background-color: var(--teal);
+  height: 50px;
   width: 100%;
 }
 
-/* --- SEÇÃO GERAL DE SERVIÇOS --- */
+/* ================================================== */
+/* SEÇÃO SERVIÇOS (CARDS)                              */
+/* ================================================== */
+
 .secao-servicos {
-  background-color: #fff8f0; /* Fundo creme igual à barra branca anterior */
-  padding: 60px 0 100px 0; /* Espaçamento interno */
+  background-color: var(--cream);
+  padding: 60px 0 100px 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -211,15 +255,14 @@ body {
   margin: 0 auto;
 }
 
-/* --- TEXTOS E TÍTULOS --- */
 .cabecalho-servicos {
   margin-bottom: 50px;
 }
 
 .subtitulo-teal {
-  color: #1fb6ac;
+  color: var(--teal);
   font-size: 14px;
-  letter-spacing: 1px; /* Espaçamento entre letras */
+  letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 10px;
@@ -229,36 +272,40 @@ body {
   font-size: 32px;
   color: #000;
   font-weight: 700;
-  max-width: 600px; /* Limita a largura para quebrar a linha igual na foto */
+  max-width: 600px;
   line-height: 1.2;
 }
 
-/* --- GRID DOS CARDS --- */
+/* CARDS GRID */
 .cards-grid {
   display: flex;
   justify-content: space-between;
-  gap: 30px; /* Espaço entre os cards */
-  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* --- ESTILO DO CARTÃO (CARD) --- */
 .card {
-  background-color: #ffffff;
-  border-radius: 30px; /* Borda bem arredondada */
+  background-color: #fff;
+  border-radius: 30px;
   padding: 40px 30px;
-  flex: 1; /* Faz os 3 terem o mesmo tamanho */
+  flex: 1;
   min-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02); /* Sombra super leve opcional */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* <- animação suave */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* levanta o card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* sombra mais forte */
 }
 
 .card h4 {
   font-size: 20px;
   margin: 20px 0;
-  color: #000;
 }
 
 .card p {
@@ -267,9 +314,9 @@ body {
   line-height: 1.6;
 }
 
-/* --- QUADRADO DO ÍCONE --- */
+/* ÍCONE BOX */
 .icone-box {
-  background-color: #1fb6ac;
+  background-color: var(--teal);
   width: 160px;
   height: 120px;
   border-radius: 15px;
@@ -280,102 +327,84 @@ body {
 }
 
 /* ================================================== */
-/* MEDIA QUERIES - Responsividade para Celulares      */
+/* RESPONSIVIDADE (MEDIA QUERIES)                     */
 /* ================================================== */
 
 @media (max-width: 939px) {
-  /* 1. Esconde a imagem dos cães/gatos que você tirou */
   .box-imagem-pets {
     display: none;
   }
 
-  /* 2. Ajuste do Container Principal */
   .container {
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Garante uso total da largura */
+    width: 100%;
   }
 
-  /* 3. Correção da imagem subindo (O Pulo do Gato) */
   .backgroundinicio {
-    height: auto; /* Altura automática */
-    padding-bottom: 0px; /* Remove o espaço de baixo para a imagem encostar */
+    height: auto;
+    padding-bottom: 0;
   }
 
-  /* Ajuste fino para a imagem dos 3 pets encostar na barra branca */
   .inciolanding img:last-child {
-    display: block;
-    margin-bottom: -37px; /* Compensa um pequeno espaço natural de imagens */
+    margin-bottom: -35px;
   }
 
-  /* 4. CORREÇÃO DA BARRA PRETA E TAMANHO PEQUENO */
-
-  /* Esconde os botões do menu desktop no celular (eles que quebram o site) */
+  /* Esconde botões do desktop no celular (mantém hamburguer) */
   .botoes .btn,
   .botoes div:not(:first-child) {
-    /* Mantém apenas o botão do menu hambúrguer visível, esconde o resto */
     display: none;
   }
 
-  /* Ajusta a barra branca para os ícones ficarem um embaixo do outro ou em grade */
   .barra-branca {
-    flex-wrap: wrap; /* Permite quebrar linha */
-    height: auto; /* Altura se adapta */
+    flex-wrap: wrap;
+    height: auto;
     gap: 10px;
     padding: 28px;
   }
 
   .alinharimagemtext {
-    width: 45%; /* Coloca 2 por linha (ou mude para 100% para um por linha) */
+    width: 45%;
     justify-content: flex-start;
     gap: 10px;
     height: auto;
     margin-bottom: 15px;
   }
 
-  /* Ajuste de texto para não estourar */
   .titulo-principal {
-    font-size: 24px; /* Diminui a fonte do título */
+    font-size: 24px;
     text-align: center;
   }
 
-  /* Garante que os cards se empilhem e tenham bom espaçamento */
   .cards-grid {
-    justify-content: center; /* Centraliza os cards quando quebram a linha */
-    gap: 20px; /* Reduz o espaçamento vertical entre os cards empilhados */
+    justify-content: center;
+    gap: 20px;
   }
 
-  /* Faz com que cada card ocupe 100% da largura do contêiner */
   .card {
-    flex: 0 0 90%; /* Não cresce nem encolhe, ocupa 90% da largura disponível */
-    max-width: 400px; /* Limita a largura máxima para não ficar muito largo em tablets */
-    min-width: unset; /* Remove o min-width desktop */
-    padding: 30px 20px; /* Reduz o padding interno do card */
+    flex: 0 0 90%;
+    max-width: 400px;
+    padding: 30px 20px;
   }
 
-  /* Ajuste do Título e Parágrafo dentro do Card */
   .card h4 {
     font-size: 18px;
   }
+
   .card p {
     font-size: 13px;
   }
 
-  /* Ajuste o tamanho da caixa de ícone */
   .icone-box {
     width: 120px;
     height: 90px;
   }
 }
 
-/* --- AJUSTE FINO PARA TELAS MUITO PEQUENAS (400px ou menos) --- */
 @media (max-width: 400px) {
-  /* Alvo: a imagem petsthree dentro da seção inciolanding */
   .inciolanding img:last-child {
-    /* Limita o tamanho máximo da imagem a 250px (era 300px no 768px) */
     max-width: 400px;
-    margin-bottom: -30px;
-    /* Garante que ocupe 90% da largura do contêiner */
     width: 90%;
+    margin-bottom: -30px;
   }
 }
