@@ -1,0 +1,367 @@
+/* ================================================== */
+/* 1. RESET E CONFIGURAÇÃO GLOBAL                    */
+/* ================================================== */
+html,
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  padding-top: 35px; /* Evita que o header fixo tampe o conteúdo */
+}
+
+.fonte {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+/* ================================================== */
+/* 2. VARIÁVEIS SIMPLES (cores e manutenção)         */
+/* ================================================== */
+:root {
+  --teal: #1fb6ac;
+  --orange: #ff914d;
+  --cream: #fff8f0;
+  --menu-hover: #f8c7a9;
+  --menu-bg: #ffffff;
+}
+
+/* ================================================== */
+/* 3. BOTÕES - PADRÃO GLOBAL                         */
+/* ================================================== */
+.btn {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  transition: 0.25s ease;
+  user-select: none;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: scale(1.03);
+}
+
+/* ================================================== */
+/* 4. BOTÕES ESPECÍFICOS                              */
+/* ================================================== */
+.agenda {
+  font-family: "Poppins";
+  width: 140px;
+  height: 44px;
+  background: transparent;
+  color: #000;
+  white-space: nowrap;
+}
+
+.sobrenos,
+.nossocontato {
+  width: 100px;
+  height: 44px;
+  color: #000;
+  white-space: nowrap;
+}
+
+.loginconta {
+  width: 105px;
+  height: 44px;
+  color: #000;
+  border: 2px solid var(--orange);
+  background: transparent;
+}
+
+.criarconta {
+  width: 105px;
+  height: 44px;
+  background: var(--orange);
+  color: #fff;
+}
+
+.vamoscomecar {
+  width: 220px;
+  height: 55px;
+  background: var(--orange);
+  color: #fff;
+}
+
+.btn-veja-mais {
+  background-color: var(--orange);
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* ================================================== */
+/* 5. HEADER / NAVBAR                                 */
+/* ================================================== */
+.headercanto {
+  background-color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.botoes {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.botoes > div {
+  position: relative; /* referência para .menu-agenda */
+}
+
+/* Botão hamburger */
+.menu {
+  display: none; /* só aparece no mobile via media query */
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2000;
+  background: var(--teal);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* ================================================== */
+/* 6. DROPDOWN - MENU AGENDAMENTO                     */
+/* ================================================== */
+.menu-agenda {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1010;
+}
+
+.menu-agenda .opcao {
+  display: block;
+  padding: 10px 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+}
+
+.menu-agenda .opcao:hover {
+  background: var(--menu-hover);
+}
+
+/* ================================================== */
+/* 7. MENU HAMBURGER (mobile)                         */
+/* ================================================== */
+.menu-hamburger {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 200px;
+  flex-direction: column;
+  background-color: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  gap: 10px;
+  z-index: 1999;
+}
+
+.menu-hamburger .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.menu-hamburger .btn:hover {
+  background-color: var(--menu-hover);
+}
+
+/* ================================================== */
+/* 8. hambuguer / agendar opcoes mobile               */
+/* ================================================== */
+
+.menu-agenda-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+  gap: 0;
+}
+
+.menu-agenda-mobile .opcao {
+  padding: 10px 14px;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-agenda-mobile .opcao:hover {
+  background-color: var(--menu-hover);
+}
+
+/* ================================================== */
+/* 8. HERO / PRIMEIRA DOBRA                             */
+/* ================================================== */
+.backgroundinicio {
+  background-color: var(--teal);
+  height: 384px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.inciolanding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-imagem-pets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================================== */
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+}
+.site-conteudo {
+    flex: 1; 
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+/* Posiciona as divs de fundo atrás do conteúdo principal */
+
+
+
+.caixa {
+    width: 350px; 
+    padding: 30px;
+    background-color: rgba(238, 238, 238, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.BotaoLogar, .BotaoRegistrar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 5px;
+}
+.BotaoLogar { background-color: #1FB6AC; }
+.BotaoRegistrar { background-color: #FF914D; }
+/* Estilos do Footer */
+/* Estilos do Footer e Container (Mantendo a cor #019D92) */
+footer {
+    background-color: #019D92; 
+    color: white; 
+    padding: 30px 0;
+}
+
+.rodape-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Layout Principal com Flexbox */
+.rodape-principal {
+    display: flex; 
+    justify-content: space-between; 
+    
+    /* ESSENCIAL: Alinha todo o conteúdo ao centro verticalmente (em linha reta) */
+    align-items: center; 
+    
+    flex-wrap: wrap; /* Permite quebras apenas se a tela for muito pequena */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* Estilo das Colunas */
+.rodape-coluna {
+    padding: 0 15px; 
+    margin-bottom: 20px;
+}
+
+/* Larguras Específicas para cada Coluna */
+/* 1. Coluna da Logo (1/4 da largura) */
+.rodape-coluna.logo {
+    /* Define uma largura fixa para a logo ser menor e deixar espaço */
+    flex: 0 0 25%; /* Não cresce (0), Não encolhe (0), Largura base (25%) */
+    text-align: center;
+}
+
+/* 2. Colunas de Links e Endereço (as 3/4 restantes) */
+.rodape-coluna.links,
+.rodape-coluna.endereco {
+    /* Divide o espaço restante entre as duas colunas */
+    flex: 1 1 200px; /* Cresce e encolhe, com uma largura mínima de 200px */
+    text-align: left;
+}
+
+/* Imagem da Logo */
+.logorodape {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    text-align: center; 
+}
+
+/* Estilo para as listas */
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Media Query: Empilhamento para Telas Pequenas */
+@media (max-width: 768px) {
+    .rodape-principal {
+        flex-direction: column; /* Empilha as colunas */
+        align-items: center;
+        text-align: center;
+    }
+    .rodape-coluna {
+        flex: 0 0 100%; /* Ocupa a largura total no celular */
+        margin-bottom: 20px;
+    }
+}
