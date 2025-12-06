@@ -278,3 +278,104 @@ body {
   justify-content: center;
   margin-bottom: 10px;
 }
+
+/* ================================================== */
+/* MEDIA QUERIES - Responsividade para Celulares      */
+/* ================================================== */
+
+@media (max-width: 939px) {
+  /* 1. Esconde a imagem dos cães/gatos que você tirou */
+  .box-imagem-pets {
+    display: none;
+  }
+
+  /* 2. Ajuste do Container Principal */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Garante uso total da largura */
+  }
+
+  /* 3. Correção da imagem subindo (O Pulo do Gato) */
+  .backgroundinicio {
+    height: auto; /* Altura automática */
+    padding-bottom: 0px; /* Remove o espaço de baixo para a imagem encostar */
+  }
+
+  /* Ajuste fino para a imagem dos 3 pets encostar na barra branca */
+  .inciolanding img:last-child {
+    display: block;
+    margin-bottom: -37px; /* Compensa um pequeno espaço natural de imagens */
+  }
+
+  /* 4. CORREÇÃO DA BARRA PRETA E TAMANHO PEQUENO */
+
+  /* Esconde os botões do menu desktop no celular (eles que quebram o site) */
+  .botoes .btn,
+  .botoes div:not(:first-child) {
+    /* Mantém apenas o botão do menu hambúrguer visível, esconde o resto */
+    display: none;
+  }
+
+  /* Ajusta a barra branca para os ícones ficarem um embaixo do outro ou em grade */
+  .barra-branca {
+    flex-wrap: wrap; /* Permite quebrar linha */
+    height: auto; /* Altura se adapta */
+    gap: 10px;
+    padding: 28px;
+  }
+
+  .alinharimagemtext {
+    width: 45%; /* Coloca 2 por linha (ou mude para 100% para um por linha) */
+    justify-content: flex-start;
+    gap: 10px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  /* Ajuste de texto para não estourar */
+  .titulo-principal {
+    font-size: 24px; /* Diminui a fonte do título */
+    text-align: center;
+  }
+
+  /* Garante que os cards se empilhem e tenham bom espaçamento */
+  .cards-grid {
+    justify-content: center; /* Centraliza os cards quando quebram a linha */
+    gap: 20px; /* Reduz o espaçamento vertical entre os cards empilhados */
+  }
+
+  /* Faz com que cada card ocupe 100% da largura do contêiner */
+  .card {
+    flex: 0 0 90%; /* Não cresce nem encolhe, ocupa 90% da largura disponível */
+    max-width: 400px; /* Limita a largura máxima para não ficar muito largo em tablets */
+    min-width: unset; /* Remove o min-width desktop */
+    padding: 30px 20px; /* Reduz o padding interno do card */
+  }
+
+  /* Ajuste do Título e Parágrafo dentro do Card */
+  .card h4 {
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 13px;
+  }
+
+  /* Ajuste o tamanho da caixa de ícone */
+  .icone-box {
+    width: 120px;
+    height: 90px;
+  }
+}
+
+/* --- AJUSTE FINO PARA TELAS MUITO PEQUENAS (400px ou menos) --- */
+@media (max-width: 400px) {
+  /* Alvo: a imagem petsthree dentro da seção inciolanding */
+  .inciolanding img:last-child {
+    /* Limita o tamanho máximo da imagem a 250px (era 300px no 768px) */
+    max-width: 400px;
+    margin-bottom: -30px;
+    /* Garante que ocupe 90% da largura do contêiner */
+    width: 90%;
+  }
+}
