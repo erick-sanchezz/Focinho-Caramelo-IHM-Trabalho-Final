@@ -1,89 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    
-    <link href="Login.css" rel="stylesheet"> 
-</head>
-<body>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link href="css/Login.css" rel="stylesheet" />
+  </head>
+  <body>
     <section class="headercanto">
-        <div>
-          <img src="/home/murilo/html/trabalhoSite/logopetshop (1).png" alt="Banner do site" width="45">
+      <div>
+        <img
+          src="/home/murilo/html/trabalhoSite/logopetshop (1).png"
+          alt="Banner do site"
+          width="45"
+        />
+      </div>
+      <div class="botoes">
+        <div class="agenda">
+          <a href="#" class="agenda">Agende uma Consulta</a>
         </div>
-        <div class="botoes">
-          <div class="agenda"> <a href="#" class="agenda">Agende uma Consulta</a> </div>
-          <div class="sobrenos"><a href="#" class="sobrenos">Sobre Nós</a></div>
-          <div class="nossocontato"><a href="#" class="nossocontato">Nosso Contato</a></div>
-          <div class="loginconta"><a href="/home/murilo/html/trabalhoSite/login.html" class="loginconta">Login</a></div>
-          <div class="criarconta"><a href="/home/murilo/html/trabalhoSite/cadastrar.html" class="loginconta">Criar Conta</a></div>
+        <div class="sobrenos"><a href="#" class="sobrenos">Sobre Nós</a></div>
+        <div class="nossocontato">
+          <a href="#" class="nossocontato">Nosso Contato</a>
         </div>
+        <div class="loginconta">
+          <a href="/home/murilo/html/trabalhoSite/login.html" class="loginconta"
+            >Login</a
+          >
+        </div>
+        <div class="criarconta">
+          <a
+            href="/home/murilo/html/trabalhoSite/cadastrar.html"
+            class="loginconta"
+            >Criar Conta</a
+          >
+        </div>
+      </div>
     </section>
-      <div id="fundo-esquerda"></div>
+    <div id="fundo-esquerda"></div>
     <div id="fundo-direita"></div>
     <div class="site-conteudo">
-        <div class="caixa">
-            <h4>Acesse sua conta</h4>
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email">
-                <label for="floatingInput">Email</label>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-                <label for="floatingPassword">Senha</label>
-            </div>
-            <div class="form-check text-start my-3">
-                <input class="form-check-input" type="checkbox" value="remember-me" id="checkDefault">
-                <label class="form-check-label" for="checkDefault">Lembre-se de mim</label>
-            </div>
-            <div>
-                <button type="button" class="BotaoLogar"><strong>Login</strong></button>
-            </div>
-            <a href="#">esquecei minha senha</a>
-            <hr class="my-4 w-100 mx-auto"> 
-            <div>
-                <h4>Não tem uma conta?</h4>
-                <button type="button" class="BotaoRegistrar">Cadastrar</button>
-            </div>
+      <div class="caixa">
+        <h4>Acesse sua conta</h4>
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Email"
+          />
+          <label for="floatingInput">Email</label>
         </div>
-    </div> 
-<footer>
-    <div class="rodape-container">
-        <div class="rodape-principal">
-            
-            <div class="rodape-colunalogo">
-                    <img src="file:///home/murilo/Downloads/image-removebg-preview.png" alt="logo" class="logorodape">
-            </div>
-            
-            <div class="rodape-coluna links">
-                <h4><strong>Links Rápidos</strong></h4>
-                <ul class="list-unstyled">
-                    <li>serviços</li>
-                    <li>Sobre nós</li>
-                    <li>Redes Sociais</li>
-                    <li>Direitos e Diretrizes</li>
-                </ul>
-            </div>
-            
-            <div class="rodape-coluna endereco">
-                <h4><strong>Endereço</strong></h4>
-                <ul class="list-unstyled">
-                    <li>Rua 2 de Julho</li>
-                    <li>Copixaba, Xique Xique</li>
-                    <li>47400-000</li>
-                </ul>
-            </div>
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Senha"
+          />
+          <label for="floatingPassword">Senha</label>
         </div>
-        
-        <div class="rodape-copyright">
-            <p>&copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos reservados.</p>
+        <div class="form-check text-start my-3">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="remember-me"
+            id="checkDefault"
+          />
+          <label class="form-check-label" for="checkDefault"
+            >Lembre-se de mim</label
+          >
         </div>
+        <div>
+          <button type="button" class="BotaoLogar">
+            <strong>Login</strong>
+          </button>
+        </div>
+        <a href="#">esquecei minha senha</a>
+        <hr class="my-4 w-100 mx-auto" />
+        <div>
+          <h4>Não tem uma conta?</h4>
+          <button type="button" class="BotaoRegistrar">Cadastrar</button>
+        </div>
+      </div>
     </div>
-</footer>
+    <footer>
+      <div class="rodape-container">
+        <div class="rodape-principal">
+          <div class="rodape-colunalogo">
+            <img
+              src="file:///home/murilo/Downloads/image-removebg-preview.png"
+              alt="logo"
+              class="logorodape"
+            />
+          </div>
 
-        
-</body>
+          <div class="rodape-coluna links">
+            <h4><strong>Links Rápidos</strong></h4>
+            <ul class="list-unstyled">
+              <li>serviços</li>
+              <li>Sobre nós</li>
+              <li>Redes Sociais</li>
+              <li>Direitos e Diretrizes</li>
+            </ul>
+          </div>
+
+          <div class="rodape-coluna endereco">
+            <h4><strong>Endereço</strong></h4>
+            <ul class="list-unstyled">
+              <li>Rua 2 de Julho</li>
+              <li>Copixaba, Xique Xique</li>
+              <li>47400-000</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="rodape-copyright">
+          <p>
+            &copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
