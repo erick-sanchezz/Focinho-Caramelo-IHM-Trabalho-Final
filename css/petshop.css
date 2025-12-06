@@ -1,0 +1,78 @@
+footer {
+    background-color: #019D92; 
+    color: white; 
+    padding: 30px 0;
+}
+
+.rodape-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* Layout Principal com Flexbox */
+.rodape-principal {
+    display: flex; 
+    justify-content: space-between; 
+    
+    /* ESSENCIAL: Alinha todo o conteúdo ao centro verticalmente (em linha reta) */
+    align-items: center; 
+    
+    flex-wrap: wrap; /* Permite quebras apenas se a tela for muito pequena */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* Estilo das Colunas */
+.rodape-coluna {
+    padding: 0 15px; 
+    margin-bottom: 20px;
+}
+.list-unstyled li {
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+}
+/* Larguras Específicas para cada Coluna */
+/* 1. Coluna da Logo (1/4 da largura) */
+.rodape-coluna.logo {
+    /* Define uma largura fixa para a logo ser menor e deixar espaço */
+    flex: 0 0 25%; /* Não cresce (0), Não encolhe (0), Largura base (25%) */
+    text-align: center;
+}
+
+/* 2. Colunas de Links e Endereço (as 3/4 restantes) */
+.rodape-coluna.links,
+.rodape-coluna.endereco {
+    /* Divide o espaço restante entre as duas colunas */
+    flex: 1 1 200px; /* Cresce e encolhe, com uma largura mínima de 200px */
+    text-align: left;
+}
+
+/* Imagem da Logo */
+.logorodape {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    text-align: center; 
+}
+
+/* Estilo para as listas */
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Media Query: Empilhamento para Telas Pequenas */
+@media (max-width: 768px) {
+    .rodape-principal {
+        flex-direction: column; /* Empilha as colunas */
+        align-items: center;
+        text-align: center;
+    }
+    .rodape-coluna {
+        flex: 0 0 100%; /* Ocupa a largura total no celular */
+        margin-bottom: 20px;
+    }
+}
