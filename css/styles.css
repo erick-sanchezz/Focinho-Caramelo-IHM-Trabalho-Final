@@ -1,5 +1,5 @@
 /* ================================================== */
-/* RESET E CONFIGURAÇÃO GLOBAL                        */
+/* 1. RESET E CONFIGURAÇÃO GLOBAL                    */
 /* ================================================== */
 html,
 body {
@@ -15,9 +15,8 @@ body {
 }
 
 /* ================================================== */
-/* VARIÁVEIS SIMPLES (opcional para manutenção)       */
+/* 2. VARIÁVEIS SIMPLES (cores e manutenção)         */
 /* ================================================== */
-/* -- não obrigatório, só pra referência rápida -- */
 :root {
   --teal: #1fb6ac;
   --orange: #ff914d;
@@ -27,9 +26,8 @@ body {
 }
 
 /* ================================================== */
-/* BOTÕES - PADRÃO GLOBAL                             */
+/* 3. BOTÕES - PADRÃO GLOBAL                         */
 /* ================================================== */
-/* Estilo base para todos os botões/links que usam .btn */
 .btn {
   font-size: 14px;
   display: flex;
@@ -37,37 +35,30 @@ body {
   justify-content: center;
   cursor: pointer;
   border-radius: 10px;
-  font-weight: 700; /* garante negrito por padrão */
+  font-weight: 700;
   text-decoration: none;
   border: none;
   transition: 0.25s ease;
   user-select: none;
 }
 
-/* Hover padrão (corrigido: usar transform) */
 .btn:hover {
   filter: brightness(1.05);
   transform: scale(1.03);
 }
 
 /* ================================================== */
-/* BOTÕES ESPECÍFICOS                                  */
-/* (Somente propriedades que difere do padrão .btn)   */
+/* 4. BOTÕES ESPECÍFICOS                              */
 /* ================================================== */
-
-/* Agenda - botão que abre dropdown */
 .agenda {
   font-family: "Poppins";
-  font-weight: bold;
   width: 140px;
   height: 44px;
-  background: transparent; /* sem cor fixa, pois abre um menu */
+  background: transparent;
   color: #000;
-  white-space: nowrap; /* evita quebra de linha */
-  font-weight: 700; /* reafirmo para evitar perda do bold */
+  white-space: nowrap;
 }
 
-/* Links/itens com largura fixa */
 .sobrenos,
 .nossocontato {
   width: 100px;
@@ -98,30 +89,24 @@ body {
   color: #fff;
 }
 
-/* menu hamburger (pequeno) */
-.menu {
-  width: 50px;
-  height: 44px;
-  background: transparent;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  font-weight: 700;
+.btn-veja-mais {
+  background-color: var(--orange);
+  color: #fff;
+  width: 150px;
+  height: 45px;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
 /* ================================================== */
-/* HEADER / NAVBAR                                     */
+/* 5. HEADER / NAVBAR                                 */
 /* ================================================== */
-
 .headercanto {
   background-color: var(--teal);
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -136,35 +121,44 @@ body {
   align-items: center;
 }
 
-/* Faz o container direto do botão + dropdown ser referência */
 .botoes > div {
   position: relative; /* referência para .menu-agenda */
 }
 
-/* ================================================== */
-/* DROPDOWN: MENU DE AGENDAMENTO                      */
-/* ================================================== */
+/* Botão hamburger */
+.menu {
+  display: none; /* só aparece no mobile via media query */
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2000;
+  background: var(--teal);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
 
-/* Começa escondido; o JS troca para display: flex quando abrir */
+/* ================================================== */
+/* 6. DROPDOWN - MENU AGENDAMENTO                     */
+/* ================================================== */
 .menu-agenda {
-  display: none; /* oculto por padrão */
-  flex-direction: column; /* quando virar flex, fica coluna */
+  display: none;
+  flex-direction: column;
   position: absolute;
-  top: 100%; /* colado abaixo do botão pai */
-  right: 0; /* alinhado à direita do botão pai */
+  top: 100%;
+  right: 0;
   background: var(--menu-bg);
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   z-index: 1010;
-  font-size: 14px;
 }
 
-/* Links dentro do dropdown (são <a>) */
 .menu-agenda .opcao {
   display: block;
   padding: 10px 14px;
-  font-weight: 700; /* bold nas opções também, se desejar */
+  font-weight: 700;
   text-decoration: none;
   color: #000;
   white-space: nowrap;
@@ -175,9 +169,62 @@ body {
 }
 
 /* ================================================== */
-/* HERO / PRIMEIRA DOBRA                               */
+/* 7. MENU HAMBURGER (mobile)                         */
+/* ================================================== */
+.menu-hamburger {
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 200px;
+  flex-direction: column;
+  background-color: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  gap: 10px;
+  z-index: 1999;
+}
+
+.menu-hamburger .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.menu-hamburger .btn:hover {
+  background-color: var(--menu-hover);
+}
+
+/* ================================================== */
+/* 8. hambuguer / agendar opcoes mobile               */
 /* ================================================== */
 
+.menu-agenda-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--menu-bg);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5px;
+  gap: 0;
+}
+
+.menu-agenda-mobile .opcao {
+  padding: 10px 14px;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-agenda-mobile .opcao:hover {
+  background-color: var(--menu-hover);
+}
+
+/* ================================================== */
+/* 8. HERO / PRIMEIRA DOBRA                             */
+/* ================================================== */
 .backgroundinicio {
   background-color: var(--teal);
   height: 384px;
@@ -206,9 +253,8 @@ body {
 }
 
 /* ================================================== */
-/* BARRA DE BENEFÍCIOS (barra creme com ícones)       */
+/* 9. BARRA DE BENEFÍCIOS                               */
 /* ================================================== */
-
 .barra-branca {
   display: flex;
   background-color: var(--cream);
@@ -225,13 +271,17 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 160px;
-  /* mantenho height:0 se você usa assim por layout */
   height: 0px;
 }
 
 /* ================================================== */
-/* FAIXA DIVISÓRIA                                     */
+/* 10. FAIXAS DIVISÓRIAS                                */
 /* ================================================== */
+.faixa-branca {
+  background-color: var(--cream);
+  height: 50px;
+  width: 100%;
+}
 
 .faixa-divisoria {
   background-color: var(--teal);
@@ -240,9 +290,8 @@ body {
 }
 
 /* ================================================== */
-/* SEÇÃO SERVIÇOS (CARDS)                              */
+/* 11. SEÇÃO SERVIÇOS (CARDS)                            */
 /* ================================================== */
-
 .secao-servicos {
   background-color: var(--cream);
   padding: 60px 0 100px 0;
@@ -295,12 +344,12 @@ body {
   align-items: center;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* <- animação suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* levanta o card */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* sombra mais forte */
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card h4 {
@@ -327,18 +376,68 @@ body {
 }
 
 /* ================================================== */
-/* RESPONSIVIDADE (MEDIA QUERIES)                     */
+/* 12. SEÇÃO GALERIA                                   */
 /* ================================================== */
+.secao-galeria {
+  background-color: var(--teal);
+  padding: 50px 0 80px 0;
+  display: flex;
+  justify-content: center;
+}
 
+.container-galeria {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.titulo-galeria {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.box-cinza-galeria {
+  background-color: #cfd8dc;
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.grid-fotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.grid-fotos img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.grid-fotos img:hover {
+  transform: scale(1.05);
+}
+
+/* ================================================== */
+/* 13. RESPONSIVIDADE (TABLET & MOBILE)               */
+/* ================================================== */
 @media (max-width: 939px) {
-  .box-imagem-pets {
-    display: none;
-  }
-
   .container {
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  .box-imagem-pets {
+    display: none;
   }
 
   .backgroundinicio {
@@ -350,10 +449,13 @@ body {
     margin-bottom: -35px;
   }
 
-  /* Esconde botões do desktop no celular (mantém hamburguer) */
   .botoes .btn,
   .botoes div:not(:first-child) {
     display: none;
+  }
+
+  .menu {
+    display: flex;
   }
 
   .barra-branca {
@@ -398,6 +500,50 @@ body {
   .icone-box {
     width: 120px;
     height: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-fotos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .box-cinza-galeria {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .container-galeria {
+    width: 95%;
+  }
+
+  .btn-veja-mais {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+  }
+
+  .titulo-principal {
+    font-size: 22px;
+  }
+
+  .img-transicao {
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .barra-branca {
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+  }
+
+  .alinharimagemtext {
+    width: 100%;
   }
 }
 
