@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/petshop.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/galeria.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +13,9 @@
       rel="stylesheet"
     />
 
-    <title>Focinho Caramelo - Xique-xique</title>
+    <title>Galeria - Focinho Caramelo</title>
   </head>
-  <body class="fonte">
+  <body class="fonte body-galeria">
     <header>
       <section class="headercanto">
         <div>
@@ -34,8 +35,8 @@
           <div>
             <button class="agenda btn">Agende uma Consulta</button>
             <div class="menu-agenda">
-              <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
-              <a href="marcar.html" class="opcao">Marcar uma consulta</a>
+              <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
             </div>
           </div>
 
@@ -60,7 +61,59 @@
         <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
       </div>
     </header>
-    <div></div>
+
+    <script src="../js/script.js"></script>
+
+    <main class="main-galeria">
+      <div class="container-galeria-page">
+        <div class="header-titulo-galeria">
+          <a href="../index.html" class="link-voltar">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 12H5"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 19L5 12L12 5"
+                stroke="black"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <h1>Galeria</h1>
+        </div>
+
+        <div class="box-cinza-galeria box-galeria-expandido">
+          <div class="grid-fotos">
+            <img src="../img/foto1.png" alt="Pet" />
+            <img src="../img/foto2.webp" alt="Pet" />
+            <img src="../img/foto3.jpeg" alt="Pet" />
+            <img src="../img/foto4.jpeg" alt="Pet" />
+            <img src="../img/foto5.jpeg" alt="Pet" />
+            <img src="../img/foto6.jpg" alt="Pet" />
+            <img src="../img/foto7.jpeg" alt="Pet" />
+            <img src="../img/fotoo8.jpg" alt="Pet" />
+          </div>
+
+          <button class="btn btn-veja-mais">Veja mais</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer-pets-decoracao">
+      <img src="../img/rodape-dog.png" alt="" width="100%" />
+    </div>
     <footer>
       <div class="rodape-container">
         <div class="rodape-principal">

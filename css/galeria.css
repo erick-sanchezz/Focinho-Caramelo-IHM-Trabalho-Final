@@ -1,0 +1,112 @@
+/* =======================================================
+   ESTILOS ESPECÍFICOS DA PÁGINA GALERIA (galeria.html)
+   ======================================================= */
+
+/* 1. Ajuste do Fundo */
+/* No styles.css global, o body já é creme, mas garantimos aqui */
+.body-galeria {
+  background-color: var(--cream);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 2. Layout Principal */
+.main-galeria {
+  padding-top: 80px; /* Espaço para o header fixo */
+  padding-bottom: 50px;
+  flex: 1; /* Empurra o rodapé para baixo se tiver pouco conteúdo */
+  display: flex;
+  justify-content: center;
+}
+
+.container-galeria-page {
+  width: 90%;
+  max-width: 900px; /* Mudei de 1200px para 900px. Quanto menor, mais estreita a caixa fica */
+  margin: 0 auto; /* Garante que continue centralizado */
+}
+
+/* 3. Título com Seta (<- Galeria) */
+.header-titulo-galeria {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espaço entre a seta e o texto */
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.header-titulo-galeria h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px; /* Bem grande como na foto */
+  font-weight: 800; /* Extra bold */
+  color: #000;
+  margin: 0;
+  line-height: 1;
+}
+
+.link-voltar svg {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.link-voltar:hover svg {
+  transform: translateX(-5px); /* Efeitinho de seta movendo */
+}
+
+/* 4. Ajustes no Box Cinza (Reutilizado) */
+/* Usamos uma classe extra 'box-galeria-expandido' para ajustes finos */
+.box-galeria-expandido {
+  /* Mudei de 600px para 'auto'. Assim a caixa só cresce o necessário para caber as fotos */
+  min-height: auto;
+
+  /* Diminuí o padding (espaço interno) de 40px para 30px */
+  padding: 20px;
+
+  /* (Opcional) Se quiser forçar as fotos a ficarem um pouco menores também,
+       você pode limitar a largura da grade aqui dentro: */
+  /* max-width: 800px; */
+}
+
+/* 5. Ajuste Decorativo do Footer (A imagem dos pets embaixo) */
+.footer-pets-decoracao {
+  width: 100%;
+
+  /* O TRUQUE: Usar 'vw' (viewport width). 
+     Isso significa "-6% da largura da tela". 
+     Assim a margem se adapta ao tamanho da imagem. */
+  margin-bottom: -5vw;
+
+  line-height: 0;
+  position: relative;
+  z-index: 10; /* Garante que a imagem fique por cima da cor do footer */
+  pointer-events: none; /* Garante que a imagem não bloqueie cliques nos links do footer */
+}
+
+.footer-pets-decoracao img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+footer {
+  position: relative;
+  z-index: 1;
+  padding-top: 50px; /* Dá um respiro pro texto não colar na imagem */
+}
+
+/* =========================================
+   RESPONSIVIDADE ESPECÍFICA DESTA PÁGINA
+   ========================================= */
+@media (max-width: 600px) {
+  .header-titulo-galeria h1 {
+    font-size: 32px;
+  }
+
+  .link-voltar svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .box-galeria-expandido {
+    padding: 20px;
+  }
+}

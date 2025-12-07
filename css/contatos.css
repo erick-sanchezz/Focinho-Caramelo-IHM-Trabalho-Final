@@ -1,38 +1,65 @@
-/* Container Principal */
+/* Container Principal do Site */
 .siteconteudo {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza na horizontal */
-  justify-content: flex-start; /* Força tudo a começar do topo */
-  margin-top: 50px; /* Distância fixa do teto do site */
-  width: 100%; /* Garante que use a largura disponível */
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 50px;
+  width: 100%;
+  padding-bottom: 50px; /* Espaço para não colar no rodapé */
+}
+
+/* --- NOVO: O Wrapper que segura tudo --- */
+.wrapper-contato {
+  width: 90%; /* Ocupa 90% da tela no celular */
+  max-width: 500px; /* Mas trava em 500px no computador */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a imagem e a caixa */
+  position: relative; /* Necessário para o z-index funcionar */
 }
 
 /* Imagem do Cachorro */
 .imagem-acima-caixa {
-  width: 550px; /* Tamanho padrão */
-  max-width: 90%; /* Responsividade */
+  /* A imagem agora obedece o tamanho do wrapper (500px máx) */
+  width: 100%;
   height: auto;
-  margin-bottom: -25px; /* O efeito de sobreposição */
-  z-index: 1;
+
+  /* O PULO DO GATO: Margem em porcentagem (%) */
+  /* -10% significa que ele vai descer 10% da largura dele sobre a caixa. */
+  /* Se a imagem diminuir no celular, a margem diminui junto proporcionalmente! */
+  margin-bottom: -4.5%;
+
   position: relative;
+  z-index: 2; /* Garante que as patas fiquem POR CIMA da caixa */
+  pointer-events: none; /* Evita que a imagem bloqueie cliques se for muito grande */
 }
 
-/* A Caixa de Texto (MESCLADA) */
+/* A Caixa de Texto */
 .caixa {
   background-color: white;
+  width: 100%; /* Ocupa 100% do wrapper */
+  box-sizing: border-box; /* Garante que o padding não estoure a largura */
 
-  /* Mantive este padding específico para compensar a sobreposição da imagem */
-  padding: 40px 30px 30px 30px;
+  /* Padding Top maior para o texto não ficar escondido atrás das patas do cachorro */
+  padding: 50px 30px 30px 30px;
 
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  width: 90%;
-  max-width: 500px;
-  position: relative;
-  z-index: 1;
 
-  /* Garante que a caixa cresça para baixo naturalmente */
-  height: fit-content;
+  position: relative;
+  z-index: 1; /* Fica atrás das patas do cachorro */
+}
+
+/* Botão (só pra garantir o visual) */
+.Botaovoltar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--orange); /* Usa sua variável ou cor fixa */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
