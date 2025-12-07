@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/petshop.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/meus-agendamentos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Agenda - Focinho Caramelo</title>
+  </head>
+  <body class="fonte">
+    <header>
+      <section class="headercanto">
+        <div>
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Banner do site" width="45" />
+          </a>
+        </div>
+        <section class="botoes">
+          <!--=============botão hamburger (começa escondido)===============-->
+          <button class="menu">
+            <img
+              src="../img/menu.png"
+              alt="menu de responsividade"
+              width="25"
+            />
+          </button>
+          <div>
+            <button class="agenda btn">Agende uma Consulta</button>
+            <div class="menu-agenda">
+              <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="marcar.html" class="opcao">Marcar uma consulta</a>
+            </div>
+          </div>
+
+          <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+          <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
+          <a href="Login.html" class="loginconta btn">Login</a>
+          <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
+        </section>
+      </section>
+      <!--===================================menu que vai abrir ao clicar no hamburger===================================-->
+      <div class="menu-hamburger">
+        <div class="agenda-mobile">
+          <a class="agenda btn">Agende uma Consulta</a>
+          <div class="menu-agenda-mobile">
+            <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+            <a href="marcar.html" class="opcao">Marcar uma consulta</a>
+          </div>
+        </div>
+        <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+        <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
+        <a href="Login.html" class="loginconta btn">Login</a>
+        <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
+      </div>
+    </header>
+    <script src="../js/script.js"></script>
+
+    <main class="main-agendamentos">
+      <div class="container-agendamentos">
+        <div class="header-titulo-page">
+          <a href="../index.html" class="link-voltar">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 12H5"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 19L5 12L12 5"
+                stroke="black"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <h1>Agendamentos</h1>
+        </div>
+
+        <div class="lista-cards">
+          <div class="card-agendamento">
+            <div class="coluna-acao">
+              <button class="btn-reagendar">Reagendar</button>
+              <img src="../img/foto1.png" alt="Pet" class="foto-pet-card" />
+            </div>
+
+            <div class="coluna-dados">
+              <div class="linha-info">
+                <div class="campo-dado flex-2">
+                  <span class="label">Nome do tutor:</span>
+                  <span class="valor">João Silva</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Telefone:</span>
+                  <span class="valor">(11) 99999-9999</span>
+                </div>
+              </div>
+
+              <div class="linha-info">
+                <div class="campo-dado flex-2">
+                  <span class="label">Nome do pet:</span>
+                  <span class="valor">Princeso</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Data:</span>
+                  <span class="valor">25/10</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Hora:</span>
+                  <span class="valor">14:00</span>
+                </div>
+              </div>
+
+              <div class="linha-info">
+                <div class="campo-dado full-width">
+                  <span class="label">Sinais:</span>
+                  <span class="valor">Está mancando um pouco</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-agendamento">
+            <div class="coluna-acao">
+              <button class="btn-reagendar">Reagendar</button>
+              <img src="../img/foto5.webp" alt="Pet" class="foto-pet-card" />
+            </div>
+
+            <div class="coluna-dados">
+              <div class="linha-info">
+                <div class="campo-dado flex-2">
+                  <span class="label">Nome do tutor:</span>
+                  <span class="valor">Maria Oliveira</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Telefone:</span>
+                  <span class="valor">(74) 98888-8888</span>
+                </div>
+              </div>
+
+              <div class="linha-info">
+                <div class="campo-dado flex-2">
+                  <span class="label">Nome do pet:</span>
+                  <span class="valor">Mimi</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Data:</span>
+                  <span class="valor">28/10</span>
+                </div>
+                <div class="campo-dado flex-1">
+                  <span class="label">Hora:</span>
+                  <span class="valor">09:30</span>
+                </div>
+              </div>
+
+              <div class="linha-info">
+                <div class="campo-dado full-width">
+                  <span class="label">Sinais:</span>
+                  <span class="valor">Check-up de rotina</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="rodape-container">
+        <div class="rodape-principal">
+          <div class="rodape-colunalogo">
+            <img src="../img/logo.png" class="logorodape" width="200" />
+          </div>
+          <div class="rodape-coluna links">
+            <h4><strong>Links Rápidos</strong></h4>
+            <ul class="list-unstyled">
+              <li>serviços</li>
+              <li>Sobre nós</li>
+              <li>Redes Sociais</li>
+              <li>Direitos e Diretrizes</li>
+            </ul>
+          </div>
+          <div class="rodape-coluna endereco">
+            <h4><strong>Endereço</strong></h4>
+            <ul class="list-unstyled">
+              <li>Rua 2 de Julho</li>
+              <li>Copixaba, Xique Xique</li>
+              <li>47400-000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rodape-copyright">
+          <p>
+            &copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
