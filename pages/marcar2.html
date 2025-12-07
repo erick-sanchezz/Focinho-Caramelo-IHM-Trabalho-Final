@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/petshop.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/agendamento.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Focinho Caramelo - Xique-xique</title>
+  </head>
+  <body class="fonte">
+    <header>
+      <section class="headercanto">
+        <div>
+          <a href="../index.html">
+            <img src="../img/logo.png" alt="Banner do site" width="45" />
+          </a>
+        </div>
+        <section class="botoes">
+          <!--=============botão hamburger (começa escondido)===============-->
+          <button class="menu">
+            <img
+              src="../img/menu.png"
+              alt="menu de responsividade"
+              width="25"
+            />
+          </button>
+          <div>
+            <button class="agenda btn">Agende uma Consulta</button>
+            <div class="menu-agenda">
+              <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="marcar.html" class="opcao">Marcar uma consulta</a>
+            </div>
+          </div>
+
+          <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+          <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
+          <a href="Login.html" class="loginconta btn">Login</a>
+          <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
+        </section>
+      </section>
+      <!--===================================menu que vai abrir ao clicar no hamburger===================================-->
+      <div class="menu-hamburger">
+        <div class="agenda-mobile">
+          <a class="agenda btn">Agende uma Consulta</a>
+          <div class="menu-agenda-mobile">
+            <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+            <a href="marcar.html" class="opcao">Marcar uma consulta</a>
+          </div>
+        </div>
+        <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
+        <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
+        <a href="Login.html" class="loginconta btn">Login</a>
+        <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
+      </div>
+    </header>
+    <script src="../js/script.js"></script>
+
+    <main class="main-agendamento">
+      <div class="siteconteudo">
+        <h2 class="titulo-page">
+          Faça seu agendamento aqui mesmo, é rapidinho!
+        </h2>
+
+        <div class="box-agendamento">
+          <div class="coluna-foto">
+            <img src="../img/foto5.jpeg" alt="Gato Agendamento" />
+          </div>
+
+          <div class="coluna-form">
+            <form id="form-agendamento">
+              <input
+                type="text"
+                placeholder="Nome do tutor"
+                required
+                class="input-padrao"
+              />
+              <input
+                type="text"
+                placeholder="Nome do Pet"
+                required
+                class="input-padrao"
+              />
+              <input
+                type="tel"
+                placeholder="Telefone"
+                required
+                class="input-padrao"
+              />
+              <input
+                type="email"
+                placeholder="E-mail de contato"
+                required
+                class="input-padrao"
+              />
+
+              <textarea
+                placeholder="Conte os sinais que você percebeu no seu pet"
+                class="input-padrao area-texto"
+              ></textarea>
+
+              <div class="linha-selects">
+                <select id="select-data" class="select-padrao">
+                  <option value="" disabled selected>Data</option>
+                </select>
+
+                <select id="select-hora" class="select-padrao">
+                  <option value="" disabled selected>Hora</option>
+                </select>
+
+                <select id="select-animal" class="select-padrao">
+                  <option value="" disabled selected>Animal</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-agendar">Agendar</button>
+            </form>
+
+            <p class="aviso-feedback">
+              DEPOIS DO ATENDIMENTO NAO ESQUECA DE NOS DAR UM FEEDBACK!
+            </p>
+          </div>
+        </div>
+
+        <div class="wrapper-footer-img">
+          <img
+            src="../img/footer2.png"
+            alt="Pets Decoracao"
+            class="img-pets-footer"
+          />
+        </div>
+      </div>
+    </main>
+
+    <div class="faixa-branca"></div>
+    <footer>
+      <div class="rodape-container">
+        <div class="rodape-principal">
+          <div class="rodape-colunalogo">
+            <img src="../img/logo.png" class="logorodape" width="200" />
+          </div>
+          <div class="rodape-coluna links">
+            <h4><strong>Links Rápidos</strong></h4>
+            <ul class="list-unstyled">
+              <li>serviços</li>
+              <li>Sobre nós</li>
+              <li>Redes Sociais</li>
+              <li>Direitos e Diretrizes</li>
+            </ul>
+          </div>
+          <div class="rodape-coluna endereco">
+            <h4><strong>Endereço</strong></h4>
+            <ul class="list-unstyled">
+              <li>Rua 2 de Julho</li>
+              <li>Copixaba, Xique Xique</li>
+              <li>47400-000</li>
+            </ul>
+          </div>
+        </div>
+        <div class="rodape-copyright">
+          <p>
+            &copy;2024 Clínica Veterinária Focinho Caramelo. Todos os direitos
+            reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/agendamento.js"></script>
+  </body>
+</html>
