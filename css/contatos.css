@@ -1,56 +1,38 @@
-/* Container que segura a imagem e a caixa */
 /* Container Principal */
 .siteconteudo {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza na horizontal (esquerda/direita) */
-  justify-content: flex-start; /* O SEGREDO: Força tudo a começar do topo */
+  align-items: center; /* Centraliza na horizontal */
+  justify-content: flex-start; /* Força tudo a começar do topo */
   margin-top: 50px; /* Distância fixa do teto do site */
   width: 100%; /* Garante que use a largura disponível */
 }
 
 /* Imagem do Cachorro */
 .imagem-acima-caixa {
-  /* Tamanho Responsivo Controlado */
-  width: 250px; /* Tamanho padrão */
-  max-width: 90%; /* Se a tela for minúscula, ela obedece */
-
-  /* Se você quiser que a imagem NUNCA diminua a altura (para não puxar a caixa pra cima), 
-     defina uma altura fixa mínima, senão deixe 'auto' */
+  width: 550px; /* Tamanho padrão */
+  max-width: 90%; /* Responsividade */
   height: auto;
-
-  margin-bottom: -12px; /* O efeito de sobreposição */
+  margin-bottom: -25px; /* O efeito de sobreposição */
   z-index: 1;
   position: relative;
 }
 
-/* A Caixa de Texto */
+/* A Caixa de Texto (MESCLADA) */
 .caixa {
   background-color: white;
-  padding: 40px 30px 30px 30px; /* Aumentei o padding do topo para o texto não bater no cachorro */
+
+  /* Mantive este padding específico para compensar a sobreposição da imagem */
+  padding: 40px 30px 30px 30px;
+
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-
   width: 90%;
   max-width: 500px;
-
   position: relative;
-  z-index: 0;
+  z-index: 1;
 
-  /* Isso garante que a caixa cresça para baixo naturalmente */
+  /* Garante que a caixa cresça para baixo naturalmente */
   height: fit-content;
-}
-
-/* Ajuste na caixa para garantir o visual */
-.caixa {
-  background-color: white; /* Ou a cor do seu tema */
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 90%;
-  max-width: 500px;
-  position: relative; /* Necessário para o contexto de empilhamento */
-  z-index: 0;
 }
