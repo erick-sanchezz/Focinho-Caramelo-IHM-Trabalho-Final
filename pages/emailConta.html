@@ -3,23 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contatos - Clínica Veterinária Focinho Caramelo</title>
-    <link rel="stylesheet" href="css/petshop.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>trocarsenha</title>
+    <link href="../css/petshop.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/Login.css" rel="stylesheet" />
+    <link href="../css/fundo.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --teal: #1fb6ac;
-        --orange: #ff914d;
-        --menu-hover: #f8c7a9;
-        --menu-bg: #ffffff;
-      }
-    </style>
   </head>
   <body class="fonte">
     <header>
@@ -30,6 +24,7 @@
           </a>
         </div>
         <section class="botoes">
+          <!--=============botão hamburger (começa escondido)===============-->
           <button class="menu">
             <img
               src="../img/menu.png"
@@ -40,47 +35,70 @@
           <div>
             <button class="agenda btn">Agende uma Consulta</button>
             <div class="menu-agenda">
-              <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
-              <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+              <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+              <a href="marcar.html" class="opcao">Marcar uma consulta</a>
             </div>
           </div>
 
           <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
-          <a href="Nossocontato" class="nossocontato btn">Nosso Contato</a>
+          <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
           <a href="Login.html" class="loginconta btn">Login</a>
           <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
         </section>
       </section>
+      <!--===================================menu que vai abrir ao clicar no hamburger===================================-->
       <div class="menu-hamburger">
         <div class="agenda-mobile">
           <a class="agenda btn">Agende uma Consulta</a>
           <div class="menu-agenda-mobile">
-            <a href="#remarcar.html" class="opcao">Remarcar uma consulta</a>
-            <a href="#marcar.html" class="opcao">Marcar uma consulta</a>
+            <a href="remarcar.html" class="opcao">Remarcar uma consulta</a>
+            <a href="marcar.html" class="opcao">Marcar uma consulta</a>
           </div>
         </div>
         <a href="SobreNos.html" class="sobrenos btn">Sobre Nós</a>
-        <a href="Nossocontato" class="nossocontato btn">Nosso Contato</a>
+        <a href="NossoContato.html" class="nossocontato btn">Nosso Contato</a>
         <a href="Login.html" class="loginconta btn">Login</a>
         <a href="cadastrar.html" class="criarconta btn">Criar conta</a>
       </div>
     </header>
 
-    <main></main>
+    <script src="../js/script.js"></script>
+    <div>
+      <div class="site-conteudo">
+        <div class="caixa">
+          <h4>Encontre sua conta</h4>
+          <div class="form-floating">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Email"
+            />
+            <label for="floatingInput">Email</label>
+          </div>
 
-    <script src="js/script.js"></script>
+          <div>
+            <a href="Codigoconta.html">
+              <button type="button" class="BotaoLogar">
+                <strong>Próximo</strong>
+              </button>
+            </a>
 
-    <div></div>
+            <hr class="linha-curta" />
+            <a href="../index.html">
+              <button type="button" class="BotaoRegistrar">
+                <strong>Voltar</strong>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="rodape-container">
         <div class="rodape-principal">
-          <div class="rodape-coluna logo">
-            <img
-              src="img/logo.png"
-              class="logorodape"
-              width="200"
-              alt="Logo Focinho Caramelo"
-            />
+          <div class="rodape-colunalogo">
+            <img src="../img/logo.png" class="logorodape" width="200" />
           </div>
           <div class="rodape-coluna links">
             <h4><strong>Links Rápidos</strong></h4>
