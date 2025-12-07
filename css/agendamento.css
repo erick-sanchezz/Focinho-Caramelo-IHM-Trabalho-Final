@@ -1,0 +1,188 @@
+<style>
+    /* =======================================================
+       ESTILOS DA PÁGINA AGENDAMENTO (CSS EMBUTIDO)
+       ======================================================= */
+    
+    .body-agendamento {
+        background-color: #fff8f0; /* var(--cream) */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .main-agendamento {
+        padding-top: 80px;
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .siteconteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .titulo-page {
+        font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #000;
+    }
+    
+    /* --- BOX CINZA PRINCIPAL --- */
+    .box-agendamento {
+        background-color: #d9d9d9;
+        border-radius: 30px;
+        padding: 40px;
+        width: 90%;
+        max-width: 900px;
+        display: flex;
+        gap: 40px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 2;
+        margin: 0 auto; /* Garante centralização */
+    }
+    
+    /* Coluna da Esquerda (Foto) */
+    .coluna-foto {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .coluna-foto img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 20px;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+    }
+    
+    /* Coluna da Direita (Formulário) */
+    .coluna-form {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #form-agendamento {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Estilo dos Inputs */
+    .input-padrao {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        box-sizing: border-box; /* Importante para não estourar a caixa */
+    }
+    
+    .area-texto {
+        height: 100px;
+        resize: none;
+    }
+    
+    /* Linha dos Selects */
+    .linha-selects {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .select-padrao {
+        flex: 1;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: white;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+    }
+    
+    /* Botão Agendar */
+    .btn-agendar {
+        background-color: #ff914d; /* var(--orange) */
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 250px;
+        align-self: center;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    .btn-agendar:hover {
+        filter: brightness(1.1);
+    }
+    
+    .aviso-feedback {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 15px;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    /* --- IMAGEM DECORATIVA DO RODAPÉ --- */
+    .wrapper-footer-img {
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin-top: -40px; /* Sobe para encostar na caixa */
+    }
+    
+    .img-pets-footer {
+        width: 100%;
+        height: auto;
+        margin-bottom: -8%; /* Ajuste negativo para sobrepor o rodapé */
+        display: block;
+        pointer-events: none;
+    }
+    
+    footer {
+        position: relative;
+        z-index: 0;
+        padding-top: 60px;
+    }
+    
+    /* --- RESPONSIVIDADE --- */
+    @media (max-width: 768px) {
+        .box-agendamento {
+            flex-direction: column;
+            padding: 20px;
+            gap: 20px;
+        }
+    
+        .coluna-foto img {
+            max-width: 200px;
+        }
+    
+        .linha-selects {
+            flex-direction: column;
+        }
+        
+        .btn-agendar {
+            max-width: 100%;
+        }
+    }
+</style>
