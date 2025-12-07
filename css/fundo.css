@@ -1,5 +1,5 @@
 /* ================================================== */
-/* 1. ESTRUTURA GERAL                                 */
+/* 1. ESTRUTURA GERAL E FUNDO DA PÁGINA               */
 /* ================================================== */
 body {
   display: flex;
@@ -8,9 +8,28 @@ body {
   /* Fontes e resets básicos já vêm do style.css */
 }
 
-/* NOTA: A classe .site-conteudo e o background 
-   agora devem estar no arquivo 'fundo.css'
-*/
+/* Container principal que ocupa o centro da tela */
+.site-conteudo {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* --- Configuração do Background (Imagens Laterais) --- */
+  background-color: #fff8f0; /* Cor creme de fundo base */
+
+  /* Duas imagens: uma na esquerda, uma na direita */
+  background-image: url("../img/fundo1.png"), url("../img/fundo2.png");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+
+  /* Tamanho: 40% da largura para cada imagem, altura automática */
+  background-size: 40% auto, 40% auto;
+
+  /* Garante altura mínima descontando header/footer aproximados */
+  min-height: calc(100vh - 150px);
+}
 
 /* ================================================== */
 /* 2. CARD DE LOGIN (A CAIXA BRANCA)                  */
@@ -132,6 +151,16 @@ footer {
 /* ================================================== */
 /* 4. RESPONSIVIDADE (TABLET E MOBILE)                */
 /* ================================================== */
+
+/* Ajustes de Fundo para Telas Menores ( < 900px ) */
+@media (max-width: 900px) {
+  .site-conteudo {
+    /* Remove a imagem da direita, centraliza a da esquerda no fundo */
+    background-image: url("../img/fundo1.png");
+    background-position: center bottom;
+    background-size: 100% auto; /* Ocupa a largura toda */
+  }
+}
 
 /* Ajustes do Rodapé para Mobile ( < 768px ) */
 @media (max-width: 768px) {

@@ -1,246 +1,175 @@
 /* =================================================== */
-/* 1. ESTILOS GERAIS E LAYOUT DA PÁGINA                */
+/* 1. RESET E GERAL (Essencial para não quebrar layout)*/
 /* =================================================== */
+* {
+  box-sizing: border-box; /* Impede que padding estoure a largura da tela */
+}
 
-html, body {
-    margin: 0;
-    padding: 0;
-    /* Adicione 'height: 100%;' se o body não for flexível, mas com display: flex ele se ajusta melhor */
+html,
+body {
+  margin: 0;
+
+  background-color: #fff8f0 !important; /* Garante fundo creme */
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column; 
-    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Ajustes menores */
-.row {
-    color: black;
-}
 .fonte {
   font-family: "Poppins";
   font-size: 12px;
 }
-/* A classe .headerlado não está sendo usada no HTML fornecido, então foi ignorada */
 
 /* =================================================== */
-/* 2. MENU SUPERIOR               */
+/* [HEADER REMOVIDO] - Vai usar o do styles.css        */
 /* =================================================== */
 
-.headercanto {
-  background-color: #1fb6ac; /* Fundo turquesa */
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
-  padding: 10px 20px; /* Padding ajustado para melhor estética */
-  min-height: 70px;
-}
-
-.headercanto img{
-  width: 105px;
-}
-/* Padding ajustado para melhor estética */
-.botoes {
-  display: flex;
-  gap: 25px; /* Reduzi o gap para o menu caber e ser mais responsivo */
-  align-items: center;
-}
-
-.headercanto a{
-  text-decoration: none;
-} valores
-
-/* Links de Navegação Comuns (Sobre Nós, Contato, Agenda) */
-.Remarcarconsulta a,
-.marcarconsulta a,
-.sobrenos a,
-.nossocontato a,
-.agenda a {
-  padding: 10px 15px; 
-  height: auto;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-  color: black;
-  white-space: nowrap; 
-  text-decoration: none;
-  width: 145px; /* Largura padrão */
-}
-
-/* Estilo do Botão LOGIN */
-.loginconta a {
-    width: 140px; 
-    padding: 10px 15px; 
-    border: 1px solid #FF914D;
-    border-radius: 10px;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    font-weight: bold;
-    color: black;
-    white-space: nowrap; 
-    text-decoration: none; 
-}
-
-/* Estilo do Botão CRIAR CONTA */
-.criarconta a {
-  width: 105px; 
-  height: 44px;
-  color: #ffffff !important;
-  background-color: #ff914d; 
-  border: 1px solid #ff914d;
-  border-radius: 10px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-
-
 /* =================================================== */
-/* 3. ESTILOS DA SEÇÃO DE CONTEÚDO (SOBRE NÓS)         */
+/* 2. CONTEÚDO PRINCIPAL (SOBRE NÓS)                   */
 /* =================================================== */
-
 .site-conteudo {
-    flex: 1; /* Permite que esta seção cresça e empurre o rodapé para baixo */
-    width: 100%;
-    display: flex; 
-    justify-content: center; 
-    align-items: flex-start; 
-    padding: 40px 20px; 
-    background-color: #FFF8F0; 
-    font-size: 20px;
-}
-
-.titulo,
-.titulo2,
-.subtitulo {
-    text-align: center;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    font-size: 50px;
-}
-.subtitulo{
-    font-size: 30px;
-}
-.titulo h1, .titulo h3 { 
-    font-weight: bold;
-    color: #333;
-}
-
-.lore p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: #423e3e;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff8f0;
 }
 
 .conteudo-principal {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    width: 100%; 
-    max-width: 1500px; 
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.caixa {
-    width: 100%; 
-    max-width: 750px; 
-    padding: 30px;
-    background-color: rgba(238, 238, 238, 0.95);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 40px;
-    justify-content: center;
+/* Títulos e Textos */
+.titulo {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.flexbox{
-    display: flex;
-    
+.titulo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.lore p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #423e3e;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.destaque-final {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 30px;
 }
 
 /* =================================================== */
-/* 4. ESTILOS DO RODAPÉ (FOOTER)                       */
+/* 3. SEÇÃO VALORES E IMAGEM                           */
 /* =================================================== */
-footer {
-    background-color: #019D92; 
-    color: white; 
-    padding: 30px 0;
+.valores-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 50px;
 }
 
-.rodape-container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
+/* Caixa Verde */
+.caixa-valores {
+  flex: 1;
+  max-width: 600px;
+  background-color: #6cd4c9;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #000;
 }
 
-/* Layout Principal com Flexbox */
-.rodape-principal {
-    display: flex; 
-    justify-content: space-between; 
-    
-    /* ESSENCIAL: Alinha todo o conteúdo ao centro verticalmente (em linha reta) */
-    align-items: center; 
-    
-    flex-wrap: wrap; /* Permite quebras apenas se a tela for muito pequena */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 30px;
-    margin-bottom: 20px;
+.caixa-valores h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: left;
 }
 
-/* Estilo das Colunas */
-.rodape-coluna {
-    padding: 0 15px; 
-    margin-bottom: 20px;
+.intro-valores {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
 }
-.list-unstyled li {
-    color: black;
-    font-size: 14px;
-    line-height: 1.6;
+
+.caixa-valores ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-/* Larguras Específicas para cada Coluna */
-/* 1. Coluna da Logo (1/4 da largura) */
-.rodape-coluna.logo {
-    /* Define uma largura fixa para a logo ser menor e deixar espaço */
-    flex: 0 0 25%; /* Não cresce (0), Não encolhe (0), Largura base (25%) */
+
+.caixa-valores li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Container da Imagem */
+.imagem-valores {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* A IMAGEM (Responsiva e Limitada) */
+.imagem-valores img {
+  width: 100%;
+  max-width: 600px; /* Trava em 600px no PC */
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================================== */
+/* 4. RESPONSIVIDADE (CELULAR E TABLET)                */
+/* =================================================== */
+@media (max-width: 900px) {
+  .valores-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .caixa-valores {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .imagem-valores {
+    width: 100%;
+  }
+
+  .titulo h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Ajuste do Footer para Mobile */
+  .rodape-principal {
+    flex-direction: column;
     text-align: center;
-}
+  }
 
-/* 2. Colunas de Links e Endereço (as 3/4 restantes) */
-.rodape-coluna.links,
-.rodape-coluna.endereco {
-    /* Divide o espaço restante entre as duas colunas */
-    flex: 1 1 200px; /* Cresce e encolhe, com uma largura mínima de 200px */
-    text-align: left;
-}
-
-/* Imagem da Logo */
-.logorodape {
-    max-width: 100%; 
-    height: auto;
-    display: block;
-    text-align: center; 
-}
-
-/* Estilo para as listas */
-.list-unstyled {
-    list-style: none;
-    padding-left: 0;
-}
-
-/* Media Query: Empilhamento para Telas Pequenas */
-@media (max-width: 768px) {
-    .rodape-principal {
-        flex-direction: column; /* Empilha as colunas */
-        align-items: center;
-        text-align: center;
-    }
-    .rodape-coluna {
-        flex: 0 0 100%; /* Ocupa a largura total no celular */
-        margin-bottom: 20px;
-    }
+  .rodape-coluna {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
+  }
 }
