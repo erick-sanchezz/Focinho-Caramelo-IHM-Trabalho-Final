@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2. Preencher Select de HORÁRIOS
-  // Vamos criar horários das 08:00 às 18:00
+  // horários das 08:00 às 18:00
   const selectHora = document.getElementById("select-hora");
   const horarioInicio = 8;
   const horarioFim = 18;
