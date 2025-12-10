@@ -145,7 +145,7 @@ body {
   position: relative; /* referência para .menu-agenda */
 }
 
-/* --- Menu Hamburger (Mobile) --- */
+/*--- Menu Hamburger (Mobile) --- IA ajudou fazer menu hamburguer pra ficar responsivo*/
 .menu {
   display: none; /* só aparece no mobile via media query */
   position: fixed;
@@ -312,7 +312,7 @@ body {
   line-height: 1.2;
 }
 
-/* --- Cards Grid --- */
+/*IA ajudou --- Cards Grid --- */
 .cards-grid {
   display: flex;
   justify-content: space-between;
@@ -698,7 +698,7 @@ body {
   background-color: var(--orange);
 }
 
-/* --- Media Query Específica da Newsletter/Depoimentos --- */
+/*IA ajudou --- Media Query Específica da Newsletter/Depoimentos --- */
 @media (max-width: 800px) {
   .grid-reviews {
     flex-direction: column;
@@ -719,7 +719,7 @@ body {
    12. RESPONSIVIDADE GERAL (LAYOUT & MENU)
    ========================================================================== */
 
-/* Tablet & Mobile Pequeno */
+/*IA ajudou Tablet & Mobile Pequeno */
 @media (max-width: 939px) {
   .container {
     flex-direction: column;
@@ -794,7 +794,7 @@ body {
   }
 }
 
-/* Mobile Menor (Galeria e Ajustes Finos) */
+/*IA ajudou Mobile Menor (Galeria e Ajustes Finos) */
 @media (max-width: 600px) {
   .grid-fotos {
     grid-template-columns: repeat(2, 1fr);

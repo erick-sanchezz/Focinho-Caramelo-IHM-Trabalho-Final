@@ -9,7 +9,7 @@
   padding-bottom: 50px; /* Espaço para não colar no rodapé */
 }
 
-/* --- NOVO: O Wrapper que segura tudo --- */
+/* ---  Wrapper que segura tudo --- */
 .wrapper-contato {
   width: 90%; /* Ocupa 90% da tela no celular */
   max-width: 500px; /* Mas trava em 500px no computador */
@@ -22,11 +22,9 @@
 /* Imagem do Cachorro */
 .imagem-acima-caixa {
   /* A imagem agora obedece o tamanho do wrapper (500px máx) */
-  width: 100%;
+  width: 90%;
   height: auto;
 
-  /* O PULO DO GATO: Margem em porcentagem (%) */
-  /* -10% significa que ele vai descer 10% da largura dele sobre a caixa. */
   /* Se a imagem diminuir no celular, a margem diminui junto proporcionalmente! */
   margin-bottom: -4.5%;
 

@@ -53,27 +53,17 @@
   transform: translateX(-5px); /* Efeitinho de seta movendo */
 }
 
-/* 4. Ajustes no Box Cinza (Reutilizado) */
-/* Usamos uma classe extra 'box-galeria-expandido' para ajustes finos */
+/* 4.Usamos uma classe extra 'box-galeria-expandido' para ajustes finos */
 .box-galeria-expandido {
-  /* Mudei de 600px para 'auto'. Assim a caixa só cresce o necessário para caber as fotos */
+  /* 'auto' para a caixa só cresce o necessário para caber as fotos */
   min-height: auto;
-
-  /* Diminuí o padding (espaço interno) de 40px para 30px */
   padding: 20px;
-
-  /* (Opcional) Se quiser forçar as fotos a ficarem um pouco menores também,
-       você pode limitar a largura da grade aqui dentro: */
-  /* max-width: 800px; */
 }
 
 /* 5. Ajuste Decorativo do Footer (A imagem dos pets embaixo) */
 .footer-pets-decoracao {
   width: 100%;
-
-  /* O TRUQUE: Usar 'vw' (viewport width). 
-     Isso significa "-6% da largura da tela". 
-     Assim a margem se adapta ao tamanho da imagem. */
+  /*Assim a margem se adapta ao tamanho da imagem. */
   margin-bottom: -4.8vw;
 
   line-height: 0;

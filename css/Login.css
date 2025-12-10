@@ -8,10 +8,6 @@ body {
   /* Fontes e resets básicos já vêm do style.css */
 }
 
-/* NOTA: A classe .site-conteudo e o background 
-   agora devem estar no arquivo 'fundo.css'
-*/
-
 /* ================================================== */
 /* 2. CARD DE LOGIN (A CAIXA BRANCA)                  */
 /* ================================================== */
@@ -130,7 +126,7 @@ footer {
 }
 
 /* ================================================== */
-/* 4. RESPONSIVIDADE (TABLET E MOBILE)                */
+/* 4. IA RESPONSIVIDADE (TABLET E MOBILE)             */
 /* ================================================== */
 
 /* Ajustes do Rodapé para Mobile ( < 768px ) */

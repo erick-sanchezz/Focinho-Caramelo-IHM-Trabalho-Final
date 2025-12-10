@@ -9,7 +9,7 @@ html,
 body {
   margin: 0;
 
-  background-color: #fff8f0 !important; /* Garante fundo creme */
+  background-color: #fff8f0; /* Garante fundo creme */
 }
 
 body {
@@ -23,10 +23,6 @@ body {
   font-family: "Poppins";
   font-size: 12px;
 }
-
-/* =================================================== */
-/* [HEADER REMOVIDO] - Vai usar o do styles.css        */
-/* =================================================== */
 
 /* =================================================== */
 /* 2. CONTEÚDO PRINCIPAL (SOBRE NÓS)                   */
